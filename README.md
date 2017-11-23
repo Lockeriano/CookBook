@@ -1,24 +1,3 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[![Build Status](https://travis-ci.org/Lockeriano/CookBook.svg?branch=master)](https://travis-ci.org/Lockeriano/CookBook)
+[![Maintainability](https://api.codeclimate.com/v1/badges/da3fedd9b0ee649899d9/maintainability)](https://codeclimate.com/github/Lockeriano/CookBook/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/da3fedd9b0ee649899d9/test_coverage)](https://codeclimate.com/github/Lockeriano/CookBook/test_coverage)
