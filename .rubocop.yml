@@ -1,0 +1,13 @@
+inherit_from: .rubocop.standards.yml
+
+AllCops:
+  TargetRubyVersion: ~
+
+Metrics/BlockLength:
+  Exclude:
+    - "*.gemspec"
+    - "spec/**/*.rb"
+
+Metrics/LineLength:
+  Exclude:
+    - "*.gemspec"
