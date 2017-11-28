@@ -19,8 +19,8 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'reek'
-gem 'rubocop'
 gem 'factory_bot'
+gem 'rubocop'
 
 
 # Use CoffeeScript for .coffee assets and views
@@ -43,8 +43,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+    gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 3.6'
-  gem 'factory_bot_rails'
 end
 
 group :development do

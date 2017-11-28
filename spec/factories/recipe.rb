@@ -1,8 +1,9 @@
 FactoryBot.define do
   factory :recipe do
+
     trait :scrambled_eggs do
-      name "scrambled eggs"
-      instructions "Scramble eggs"
+      name 'scrambled eggs'
+      instructions 'Scramble eggs'
 
       after_build do |recipe|
         recipe.ingridients << FactoryBot.create(:ingridient, :egg)
@@ -13,8 +14,8 @@ FactoryBot.define do
     end
 
     trait :boiled_eggs do
-      name "boiled eggs"
-      instructions "boil eggs"
+      name 'boiled eggs'
+      instructions 'boil eggs'
 
       after_build do |recipe|
         recipe.ingridients << FactoryBot.create(:ingridient, :egg)
@@ -23,8 +24,8 @@ FactoryBot.define do
     end
 
     trait :tikka_masala do
-      name "tikka masala"
-      instructions "tikka a masal"
+      name 'tikka masala'
+      instructions 'tikka a masal'
 
       after_build do |recipe|
         recipe.ingridients << FactoryBot.create(:ingridient, :tikka)
@@ -33,8 +34,8 @@ FactoryBot.define do
     end
 
     trait :butter_chicken do
-      name "butter chicken"
-      instructions "go and make some butter chicken"
+      name 'butter chicken'
+      instructions 'go and make some butter chicken'
 
       after_build do |recipe|
         recipe.ingridients << FactoryBot.create(:ingridient, :chicken)
@@ -44,8 +45,8 @@ FactoryBot.define do
     end
 
     trait :green_curry do
-      name "green curry"
-      instructions "go and make some green curry"
+      name 'green curry'
+      instructions 'go and make some green curry'
 
       after_build do |recipe|
         recipe.ingridients << FactoryBot.create(:ingridient, :curry_paste)
