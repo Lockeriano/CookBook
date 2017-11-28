@@ -1,6 +1,5 @@
 FactoryBot.define do
   factory :ingridient do
-
     trait :egg do
       name 'egg'
       unit_type 'gram'
@@ -45,6 +44,5 @@ FactoryBot.define do
       name 'soy sauce'
       unit_type 'mililiter'
     end
-
   end
 end

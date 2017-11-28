@@ -1,15 +1,14 @@
 FactoryBot.define do
   factory :recipe do
-
     trait :scrambled_eggs do
       name 'scrambled eggs'
       instructions 'Scramble eggs'
 
       after_build do |recipe|
-        recipe.ingridients << FactoryBot.create(:ingridient, :egg)
-        recipe.ingridients << FactoryBot.create(:ingridient, :butter)
-        recipe.ingridients << FactoryBot.create(:ingridient, :salt)
-        recipe.ingridients << FactoryBot.create(:ingridient, :pepper)
+        recipe.ingridients << FactoryBot.create(:ingridient, :egg, unit_amount: 180)
+        recipe.ingridients << FactoryBot.create(:ingridient, :butter, unit_amount: 5)
+        recipe.ingridients << FactoryBot.create(:ingridient, :salt, unit_amount: 1)
+        recipe.ingridients << FactoryBot.create(:ingridient, :pepper, unit_amount: 1)
       end
     end
 
@@ -18,8 +17,8 @@ FactoryBot.define do
       instructions 'boil eggs'
 
       after_build do |recipe|
-        recipe.ingridients << FactoryBot.create(:ingridient, :egg)
-        recipe.ingridients << FactoryBot.create(:ingridient, :salt)
+        recipe.ingridients << FactoryBot.create(:ingridient, :egg, unit_amount: 180)
+        recipe.ingridients << FactoryBot.create(:ingridient, :salt, unit_amount: 1)
       end
     end
 
@@ -28,8 +27,8 @@ FactoryBot.define do
       instructions 'tikka a masal'
 
       after_build do |recipe|
-        recipe.ingridients << FactoryBot.create(:ingridient, :tikka)
-        recipe.ingridients << FactoryBot.create(:ingridient, :masala)
+        recipe.ingridients << FactoryBot.create(:ingridient, :tikka, unit_amount: 100)
+        recipe.ingridients << FactoryBot.create(:ingridient, :masala, unit_amount: 10)
       end
     end
 
@@ -38,9 +37,9 @@ FactoryBot.define do
       instructions 'go and make some butter chicken'
 
       after_build do |recipe|
-        recipe.ingridients << FactoryBot.create(:ingridient, :chicken)
-        recipe.ingridients << FactoryBot.create(:ingridient, :butter)
-        recipe.ingridients << FactoryBot.create(:ingridient, :salt)
+        recipe.ingridients << FactoryBot.create(:ingridient, :chicken, unit_amount: 250)
+        recipe.ingridients << FactoryBot.create(:ingridient, :butter, unit_amount: 30)
+        recipe.ingridients << FactoryBot.create(:ingridient, :salt, unit_amount: 1)
       end
     end
 
@@ -49,9 +48,9 @@ FactoryBot.define do
       instructions 'go and make some green curry'
 
       after_build do |recipe|
-        recipe.ingridients << FactoryBot.create(:ingridient, :curry_paste)
-        recipe.ingridients << FactoryBot.create(:ingridient, :chicken)
-        recipe.ingridients << FactoryBot.create(:ingridient, :soy_sauce)
+        recipe.ingridients << FactoryBot.create(:ingridient, :curry_paste, unit_amount: 20)
+        recipe.ingridients << FactoryBot.create(:ingridient, :chicken, unit_amount: 300)
+        recipe.ingridients << FactoryBot.create(:ingridient, :soy_sauce, unit_amount: 25)
       end
     end
   end
