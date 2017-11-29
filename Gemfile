@@ -22,7 +22,6 @@ group :development, :test do
   gem 'byebug', platforms: %i(mri mingw x64_mingw)
   gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 3.6'
-  gem 'selenium-webdriver'
 end
 
 group :development do
@@ -35,6 +34,7 @@ end
 group :test do
   gem 'capybara', '~> 2.16'
   gem 'database_cleaner', '~> 1.6.2'
+  gem 'selenium-webdriver'
 end
 
 gem 'tzinfo-data', platforms: %i(mingw mswin x64_mingw jruby)
