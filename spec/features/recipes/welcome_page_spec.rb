@@ -1,8 +1,7 @@
-require 'rails_helper'
+feature 'User visits welcome page' do
+  before { visit('/') }
 
-feature 'User visits' do
-  scenario 'valid page' do
-    visit('/')
+  it 'shows user welcome page' do
     expect(page).to have_content "We're gonna have some fun creating this app, old pal"
   end
 end

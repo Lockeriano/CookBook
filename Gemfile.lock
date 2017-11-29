@@ -236,7 +236,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  capybara (~> 2.16, >= 2.16.1)
+  capybara (~> 2.16)
   coffee-rails (~> 4.2)
   factory_bot
   factory_bot_rails
