@@ -239,7 +239,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.16)
   coffee-rails (~> 4.2)
-  database_cleaner
+  database_cleaner (~> 1.6.2)
   factory_bot
   factory_bot_rails
   jbuilder (~> 2.5)
