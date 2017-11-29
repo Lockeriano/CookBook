@@ -1,4 +1,4 @@
-feature 'User visits welcome page' do
+describe 'User visits welcome page' do
   before { visit('/') }
 
   it 'shows user welcome page' do

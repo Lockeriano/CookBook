@@ -1,13 +1,13 @@
 require: rubocop-rspec
 
-Style/AccessorMethodName:
+Style/Naming:
   Description: Check the naming of accessor methods for get_/set_.
   StyleGuide: '#accessor_mutator_method_names'
 
 Style/Alias:
   EnforcedStyle: prefer_alias_method
 
-Style/AlignParameters:
+Style/Layout:
   # Alignment of parameters in multi-line method calls.
   #
   # The `with_first_parameter` style aligns the following lines along the same
@@ -69,7 +69,7 @@ Style/FrozenStringLiteralComment:
     - "**/*.rake"
 
 # Checks the indentation of the first element in an array literal.
-Style/IndentArray:
+Style/Layout:
   # The value `special_inside_parentheses` means that array literals with
   # brackets that have their opening bracket on the same line as a surrounding
   # opening round parenthesis, shall have their first element indented relative
@@ -91,7 +91,7 @@ Style/IndentArray:
   IndentationWidth: ~
 
 # Checks the indentation of the first key in a hash literal.
-Style/IndentHash:
+Style/Layout:
   # The value `special_inside_parentheses` means that hash literals with braces
   # that have their opening brace on the same line as a surrounding opening
   # round parenthesis, shall have their first key indented relative to the
@@ -155,7 +155,7 @@ Style/MethodCalledOnDoEndBlock:
   StyleGuide: '#single-line-blocks'
   Enabled: true
 
-Style/MultilineOperationIndentation:
+Style/Layout:
   EnforcedStyle: indented
   SupportedStyles:
     - aligned
@@ -177,7 +177,7 @@ Style/PercentLiteralDelimiters:
     '%W': ()
     '%x': '{}'
 
-Style/SpaceBeforeFirstArg:
+Style/Layout:
   # When true, allows most uses of extra spacing if the intent is to align
   # things with the previous or next line, not counting empty lines or comment
   # lines.
@@ -220,13 +220,13 @@ Style/StringMethods:
   PreferredMethods:
     intern: to_sym
 
-Style/SpaceAroundBlockParameters:
+Style/Layout:
   EnforcedStyleInsidePipes: no_space
   SupportedStyles:
     - space
     - no_space
 
-Style/SpaceInsideHashLiteralBraces:
+Style/Layout:
   EnforcedStyle: no_space
   EnforcedStyleForEmptyBraces: no_space
   SupportedStyles:
@@ -271,7 +271,7 @@ Lint/DefEndAlignment:
   # The value `start_of_line` means that `end` should be aligned with method
   # calls like `private`, `public`, etc, if present in front of the `def`
   # keyword on the same line.
-  AlignWith: start_of_line
+  EnforcedStyleAlignWith: start_of_line
   SupportedStyles:
     - start_of_line
     - def
