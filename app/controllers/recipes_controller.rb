@@ -3,7 +3,5 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all
   end
 
-  def show
-
-  end
+  def show; end
 end
