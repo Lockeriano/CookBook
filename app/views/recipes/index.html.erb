@@ -1,56 +1,19 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-3" style="text-align: center; padding: 2rem">
-      <div class="card" style="width: 20rem;">
-        <%= image_tag "recipes.png", class: "card-img-top", style: "width: 100%" %>
-        <div class="card-body">
-          <h4 class="card-title"><%= Recipe.first.name %></h4>
-          <p class="card-text"><%= Recipe.first.instructions %></p>
-          <a href="#" class="btn btn-primary">Check</a>
-        </div>
+<div class="wrapper">
+  <div class="container">
+    <% @recipes.each_slice(3) do |recipes_batch| %>
+      <div class="row">
+        <% recipes_batch.each do |recipe| %>
+          <div class="col-md-4">
+            <div class="card">
+              <%= image_tag "recipes.png", class: "card-img-top" %>
+              <div class="card-body">
+                <h4 class="card-title"><%= recipe.name %></h4>
+                <a href="#" class="btn btn-primary">Check</a>
+              </div>
+            </div>
+          </div>
+        <% end %>
       </div>
-    </div>
-    <div class="col-md-3" style="text-align: center; padding: 2rem">
-      <div class="card" style="width: 20rem;">
-        <%= image_tag "recipes.png", class: "card-img-top", style: "width: 100%" %>
-        <div class="card-body">
-          <h4 class="card-title"><%= Recipe.first.name %></h4>
-          <p class="card-text"><%= Recipe.first.instructions %></p>
-          <a href="#" class="btn btn-primary">Check</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3" style="text-align: center; padding: 2rem">
-      <div class="card" style="width: 20rem;">
-        <%= image_tag "recipes.png", class: "card-img-top", style: "width: 100%" %>
-        <div class="card-body">
-          <h4 class="card-title"><%= Recipe.first.name %></h4>
-          <p class="card-text"><%= Recipe.first.instructions %></p>
-          <a href="#" class="btn btn-primary">Check</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3" style="text-align: center; padding: 2rem">
-      <div class="card" style="width: 20rem;">
-        <%= image_tag "recipes.png", class: "card-img-top", style: "width: 100%" %>
-        <div class="card-body">
-          <h4 class="card-title"><%= Recipe.first.name %></h4>
-          <p class="card-text"><%= Recipe.first.instructions %></p>
-          <a href="/recipes/:id" class="btn btn-primary">Check</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-3" style="text-align: center; padding: 2rem">
-      <div class="card" style="width: 20rem;">
-        <%= image_tag "recipes.png", class: "card-img-top", style: "width: 100%" %>
-        <div class="card-body">
-          <h4 class="card-title"><%= Recipe.first.name %></h4>
-          <p class="card-text"><%= Recipe.first.instructions %></p>
-          <a href="#" class="btn btn-primary">Check</a>
-        </div>
-      </div>
-    </div>
+    <% end %>
   </div>
 </div>
