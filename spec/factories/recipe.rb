@@ -2,7 +2,7 @@ FactoryBot.define do
   factory :recipe do
     trait :scrambled_eggs do
       name 'scrambled eggs'
-      instructions 'Scramble eggs'
+      instructions 'scramble eggs'
 
       after(:build) do |recipe|
         recipe.ingridients << FactoryBot.build(:ingridient, :egg, unit_amount: 180)

@@ -44,5 +44,10 @@ FactoryBot.define do
       name 'soy sauce'
       unit_type 'mililiter'
     end
+
+    trait :curry_paste do
+      name 'curry paste'
+      unit_type 'gram'
+    end
   end
 end

@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <div class="container">
+    <% @recipes.each_slice(3) do |recipes_batch| %>
+      <div class="row">
+        <% recipes_batch.each do |recipe| %>
+          <div class="col-md-4">
+            <div class="card">
+              <%= image_tag "recipes.png", class: "card-img-top" %>
+              <div class="card-body">
+                <h4 class="card-title"><%= recipe.name %></h4>
+                <a href="#" class="btn btn-primary">Check</a>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

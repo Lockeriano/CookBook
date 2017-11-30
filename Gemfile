@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.4.2'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
@@ -16,6 +17,7 @@ gem 'rubocop', '0.46.0'
 gem 'rubocop-rspec', '1.8.0'
 gem 'sass-rails', '~> 5.0'
 gem 'turbolinks', '~> 5'
+gem 'twitter-bootstrap-rails', '~> 4.0'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
