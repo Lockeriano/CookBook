@@ -9,10 +9,10 @@ feature 'user visits recipes page' do
   end
 
   it 'shows recipes list' do
-    expect(page).to have_content ('scrambled eggs')
-    expect(page).to have_content ('boiled eggs')
-    expect(page).to have_content ('tikka masala')
-    expect(page).to have_content ('butter chicken')
-    expect(page).to have_content ('green curry')
+    expect(page).to have_content 'scrambled eggs'
+    expect(page).to have_content 'boiled eggs'
+    expect(page).to have_content 'tikka masala'
+    expect(page).to have_content 'butter chicken'
+    expect(page).to have_content 'green curry'
   end
 end
