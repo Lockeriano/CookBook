@@ -3,11 +3,41 @@
   padding: 2rem;
 }
 
-.card-img-top {
+.card-img-top,
+.recipe-img {
   width: 100%;
 }
 
 .wrapper {
   text-align: center;
   padding: 2rem;
+}
+
+.ingridients {
+  font-size: 2.4rem;
+}
+
+li {
+  list-style-type: none;
+  font-size: 1.4rem;
+}
+
+.show-container {
+  text-align: center;
+}
+
+.recipe-header {
+  margin: 5rem 0;
+}
+
+.recipe-img-box,
+.desc-box {
+  margin: 50px 0;
+}
+
+.table {
+  margin-bottom: 50px;
+  th {
+    text-align: inherit;
+  }
 }

@@ -1,0 +1,35 @@
+<div class="show-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="recipe-img-box">
+          <%= image_tag "recipes.png", class: "img-fluid img-thumbnail"%>
+          <h1 class="recipe-name"><%= @recipe.name %></h1>
+        </div>
+        <table class="table table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Ingridient</th>
+              <th scope="col">Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @recipe.ingridients.each do |recipe| %>
+            <tr>
+              <td><%= recipe.name %></td>
+              <td><%= recipe.unit_amount %> <%= recipe.unit_type %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-6">
+        <div class="desc-box">
+          <h2>Description</h2>
+          <p><%= @recipe.instructions %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <li><%= link_to "Back", recipes_path, class: "btn btn-primary" %></li>
+</div>
