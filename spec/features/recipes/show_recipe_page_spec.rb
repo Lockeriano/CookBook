@@ -7,7 +7,7 @@ feature 'user visits show recipe page' do
 
   it 'shows user clicked recipe' do
     page.all(:xpath, '//a[contains(text(), "Show")]')[0].click
-    expect(page).to have_link 'Back'
+    expect(page).to have_current_path(%r{recipes/\d+})
 
     expect(page).to have_css("//img[src*='.png']")
     expect(page).to have_content 'scrambled eggs'
