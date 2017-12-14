@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  host: localhost
+  port: 5432
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: CookBook_development
+
+test:
+  <<: *default
+  database: CookBook_test
+
+production:
+  <<: *default
+  database: CookBook_production
+  username: CookBook
+  password: <%= ENV['COOKBOOK_DATABASE_PASSWORD'] %>
