@@ -24,6 +24,8 @@ group :development, :test do
   gem 'byebug', platforms: %i(mri mingw x64_mingw)
   gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 3.6'
+  gem 'pry', '~> 0.11.3'
+  gem 'launchy', '~> 2.4', '>= 2.4.3'
 end
 
 group :development do
