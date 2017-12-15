@@ -8,7 +8,7 @@
               <%= image_tag "recipes.png", class: "card-img-top" %>
               <div class="card-body">
                 <h4 class="card-title"><%= recipe.name %></h4>
-                <a href="#" class="btn btn-primary">Check</a>
+                <%= link_to "Show", recipe_path(recipe), class: "btn btn-primary", type: "show" %>
               </div>
             </div>
           </div>
