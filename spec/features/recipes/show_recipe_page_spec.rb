@@ -9,7 +9,7 @@ feature 'user visits show recipe page' do
   it 'shows user clicked recipe' do
     expect(page).to have_current_path(%r{recipes/\d+})
 
-    expect(page).to have_css("//img[src*='.png']")
+    expect(page.body).to match(%r{img.*src="\/assets\/recipes-.+\.png"})
     expect(page).to have_content 'tikka masala'
     expect(page).to have_content 'tikka a masal'
     expect(page).to have_content 'tikka 100 mililiter'
