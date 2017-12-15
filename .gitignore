@@ -15,6 +15,10 @@
 
 /node_modules
 /yarn-error.log
+<<<<<<< HEAD
 config/database.yml
+=======
+/config/database.yml
+>>>>>>> f2a63fedc72e9218376e0f6b251e195ab962b11e
 
 .byebug_history
