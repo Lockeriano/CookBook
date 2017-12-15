@@ -23,6 +23,8 @@ gem 'uglifier', '>= 1.3.0'
 group :development, :test do
   gem 'byebug', platforms: %i(mri mingw x64_mingw)
   gem 'factory_bot_rails'
+  gem 'launchy', '~> 2.4', '>= 2.4.3'
+  gem 'pry', '~> 0.11.3'
   gem 'rspec-rails', '~> 3.6'
 end
 

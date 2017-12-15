@@ -3,5 +3,7 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all
   end
 
-  def show; end
+  def show
+    @recipe = Recipe.find(params[:id])
+  end
 end
