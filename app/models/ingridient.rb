@@ -1,3 +1,4 @@
 class Ingridient < ApplicationRecord
-  belongs_to :recipe
+  has_many :recipes
+  has_many :recipe_ingridients
 end
