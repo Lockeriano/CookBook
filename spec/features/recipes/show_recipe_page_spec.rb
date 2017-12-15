@@ -6,7 +6,7 @@ feature 'user visits show recipe page' do
     page.all(:xpath, '//a[contains(text(), "Show")]')[1].click
   end
 
-  it 'shows user clicked recipe' do
+  it 'shows user recipe description' do
     expect(page).to have_current_path(%r{recipes/\d+})
 
     expect(page.body).to match(%r{img.*src="\/assets\/recipes-.+\.png"})
@@ -14,8 +14,5 @@ feature 'user visits show recipe page' do
     expect(page).to have_content 'tikka a masal'
     expect(page).to have_content 'tikka 100 mililiter'
     expect(page).to have_content 'masala 10 gram'
-
-    click_on('Back')
-    expect(page).to have_current_path('/recipes')
   end
 end
