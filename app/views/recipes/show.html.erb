@@ -8,15 +8,15 @@
       <table class="table table-sm">
         <thead>
           <tr>
-            <th scope="col">Ingridient</th>
+            <th scope="col">Name</th>
             <th scope="col">Amount</th>
           </tr>
         </thead>
-        <% @recipe.ingridients.each do |recipe| %>
+        <% @recipe.recipe_ingridients.each do |recipe_ingridient| %>
         <tbody>
           <tr>
-            <td><%= recipe.name %></td>
-            <td><%= recipe.unit_amount %> <%= recipe.unit_type %></td>
+            <td><%= recipe_ingridient.ingridient.name %></td>
+            <td><%= recipe_ingridient.unit_amount %> <%= recipe_ingridient.ingridient.unit_type %></td>
           </tr>
         </tbody>
         <% end %>
