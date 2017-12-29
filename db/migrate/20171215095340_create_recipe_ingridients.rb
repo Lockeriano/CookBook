@@ -7,5 +7,6 @@ class CreateRecipeIngridients < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+    add_index :recipe_ingridients, [:recipe_id, :ingridient_id], unique: true
   end
 end

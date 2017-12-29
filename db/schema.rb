@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20171215113804) do
     t.integer "unit_amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["recipe_id", "ingridient_id"], name: "index_recipe_ingridients_on_recipe_id_and_ingridient_id", unique: true
   end
 
   create_table "recipes", force: :cascade do |t|

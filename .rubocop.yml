@@ -3,7 +3,7 @@ inherit_from: .rubocop.standards.yml
 AllCops:
   TargetRubyVersion: ~
   Exclude:
-    - 'db/**/*'
+    - 'db/**/*.rb'
 
 Metrics/BlockLength:
   Exclude:
