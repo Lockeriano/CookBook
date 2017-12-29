@@ -20,7 +20,7 @@ gem 'turbolinks', '~> 5'
 gem 'twitter-bootstrap-rails', '~> 4.0'
 gem 'uglifier', '>= 1.3.0'
 
-group: :development, :test, :production do
+group :development, :test, :production do
   gem 'factory_bot_rails'
 end
 
