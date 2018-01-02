@@ -2,12 +2,14 @@ inherit_from: .rubocop.standards.yml
 
 AllCops:
   TargetRubyVersion: ~
+  Exclude:
+    - 'db/**/*.rb'
 
 Metrics/BlockLength:
   Exclude:
-    - "*.gemspec"
-    - "spec/**/*.rb"
+    - '*.gemspec'
+    - 'spec/**/*.rb'
 
 Metrics/LineLength:
   Exclude:
-    - "*.gemspec"
+    - '*.gemspec'
