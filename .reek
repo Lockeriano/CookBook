@@ -1,3 +1,5 @@
+exclude_paths:
+  - db
 Attribute:
   enabled: false
   exclude: []
