@@ -35,3 +35,39 @@ li {
     text-align: inherit;
   }
 }
+
+.margin-top-btm {
+  margin: 30px 0;
+}
+
+.form-control {
+  margin: 10px;
+}
+
+.ingridient-form-height {
+  min-height: 80px;
+}
+
+.recipe-form-height {
+  min-height: 120px
+}
+
+.formError {
+  color: red;
+  font-weight: 500;
+}
+
+.field_with_errors .form-control {
+  border: 1px solid red;
+}
+
+.delete-ingridient-line-height {
+  height: auto;
+  line-height: 54px;
+  label {
+    font-weight: 300;
+    input {
+      vertical-align: -4px;
+    }
+  }
+}
