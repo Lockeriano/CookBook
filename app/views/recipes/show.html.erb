@@ -12,11 +12,11 @@
             <th scope="col">Amount</th>
           </tr>
         </thead>
-        <% @recipe.recipe_ingridients.each do |recipe_ingridient| %>
+        <% @recipe.recipe_ingredients.each do |recipe_ingredient| %>
         <tbody>
           <tr>
-            <td><%= recipe_ingridient.name %></td>
-            <td><%= recipe_ingridient.unit_amount %> <%= recipe_ingridient.unit_type %></td>
+            <td><%= recipe_ingredient.name %></td>
+            <td><%= recipe_ingredient.unit_amount %> <%= recipe_ingredient.unit_type %></td>
           </tr>
         </tbody>
         <% end %>
