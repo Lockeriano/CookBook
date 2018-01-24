@@ -1,0 +1,25 @@
+<div class="container text-center">
+  <div class="row">
+    <div class="col-md-6">
+      <%= link_to "Add new", new_ingredient_path, class: "btn btn-default", type: "new" %>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Unit Type</th>
+          </tr>
+        </thead>
+        <% @ingredient.each do |ingredient| %>
+        <tbody>
+          <tr>
+            <td><%= ingredient.name %></td>
+            <td><%= ingredient.unit_type %></td>
+            <td><%= link_to "Edit", edit_ingredient_path(ingredient), class: "btn btn-primary", type: "edit" %></td>
+            <td><%= link_to "Delete", method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", type: "delete" %></td>
+          </tr>
+        </tbody>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>
