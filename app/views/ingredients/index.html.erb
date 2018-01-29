@@ -9,16 +9,16 @@
             <th scope="col">Unit Type</th>
           </tr>
         </thead>
-        <% @ingredient.each do |ingredient| %>
         <tbody>
+          <% @ingredients.each do |ingredient| %>
           <tr>
             <td><%= ingredient.name %></td>
             <td><%= ingredient.unit_type %></td>
             <td><%= link_to "Edit", edit_ingredient_path(ingredient), class: "btn btn-primary", type: "edit" %></td>
             <td><%= link_to "Delete", method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", type: "delete" %></td>
           </tr>
+          <% end %>
         </tbody>
-        <% end %>
       </table>
     </div>
   </div>
