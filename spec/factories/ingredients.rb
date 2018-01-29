@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :ingridient do
+  factory :ingredient do
     trait :egg do
       name 'egg'
       unit_type 'gram'
