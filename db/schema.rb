@@ -15,20 +15,20 @@ ActiveRecord::Schema.define(version: 20171215113804) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "ingridients", force: :cascade do |t|
+  create_table "ingredients", force: :cascade do |t|
     t.string "name"
     t.string "unit_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "recipe_ingridients", force: :cascade do |t|
+  create_table "recipe_ingredients", force: :cascade do |t|
     t.integer "recipe_id"
-    t.integer "ingridient_id"
+    t.integer "ingredient_id"
     t.integer "unit_amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["recipe_id", "ingridient_id"], name: "index_recipe_ingridients_on_recipe_id_and_ingridient_id", unique: true
+    t.index ["recipe_id", "ingredient_id"], name: "index_recipe_ingredients_on_recipe_id_and_ingredient_id", unique: true
   end
 
   create_table "recipes", force: :cascade do |t|
