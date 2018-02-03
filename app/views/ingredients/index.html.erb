@@ -11,7 +11,7 @@
           </tr>
         </thead>
         <tbody>
-          <% @ingredients.each do |ingredient| %>
+        <% @ingredients.each do |ingredient| %>
           <tr>
             <td><%= ingredient.name %></td>
             <td><%= ingredient.unit_type %></td>
@@ -20,7 +20,7 @@
               <%= link_to "Delete", "#", class: "btn btn-danger", type: "delete" %>
             </td>
           </tr>
-          <% end %>
+        <% end %>
         </tbody>
       </table>
     </div>
