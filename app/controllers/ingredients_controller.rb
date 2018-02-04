@@ -9,12 +9,10 @@ class IngredientsController < ApplicationController
 
   def create
     @ingredient = Ingredient.new(ingredient_params)
-    respond_to do |format|
-      if @ingredient.save
-        format.html { redirect_to ingredients_path }
-      else
-        format.html { render action: 'new' }
-      end
+    if @ingredient.save
+      redirect_to ingredients_path
+    else
+      render action: 'new'
     end
   end
 
