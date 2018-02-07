@@ -1,0 +1,12 @@
+0000000000000000000000000000000000000000 5ad0460efb6898afc0ec070155c02a119fd7c507 lockeriano <patryk.skrzyniarz19@gmail.com> 1513331314 +0100	branch: Created from HEAD
+5ad0460efb6898afc0ec070155c02a119fd7c507 eebd64a37926e4228b5c22749fa9c50a35b420a6 lockeriano <patryk.skrzyniarz19@gmail.com> 1513333711 +0100	commit: blah blah
+eebd64a37926e4228b5c22749fa9c50a35b420a6 75b974f5aabc8843bf7d1ca2b38da82fd0cc5a90 lockeriano <patryk.skrzyniarz19@gmail.com> 1513334607 +0100	commit (merge): Merged conflicts
+75b974f5aabc8843bf7d1ca2b38da82fd0cc5a90 2292139bd460ef704525df2683348a4dfb344616 lockeriano <patryk.skrzyniarz19@gmail.com> 1513335732 +0100	commit: Made many-to-many relationship and created new migration
+2292139bd460ef704525df2683348a4dfb344616 1656c5922b34b393318ed4aa35b5c7746743bc05 lockeriano <patryk.skrzyniarz19@gmail.com> 1513338153 +0100	commit: Created recipe_ingridients table, removed collumns from ingridients
+1656c5922b34b393318ed4aa35b5c7746743bc05 87d1b79d1f02b25743563ffd6c8a820beb3425f3 lockeriano <patryk.skrzyniarz19@gmail.com> 1513352146 +0100	commit: Fixed syntax in models
+87d1b79d1f02b25743563ffd6c8a820beb3425f3 7c1e9904c1ca248295cbd0c7473b96ba6f8e7284 lockeriano <patryk.skrzyniarz19@gmail.com> 1513352543 +0100	pull origin master: Merge made by the 'recursive' strategy.
+7c1e9904c1ca248295cbd0c7473b96ba6f8e7284 d55c142f1351d4b90d2265f2040b6fe9823009cc lockeriano <patryk.skrzyniarz19@gmail.com> 1514545517 +0100	commit: Fixed relations between models, added delegate to ingridient model, refactored factories, fixed show loop
+d55c142f1351d4b90d2265f2040b6fe9823009cc 6345022fce5789f811c137f106044148b86eed6a lockeriano <patryk.skrzyniarz19@gmail.com> 1514546460 +0100	commit: Added exclude schema.rb to rubocop config
+6345022fce5789f811c137f106044148b86eed6a 158809b8b6e0012243af7f7bf8ea902257b983fe lockeriano <patryk.skrzyniarz19@gmail.com> 1514578302 +0100	commit: Made requested changes
+158809b8b6e0012243af7f7bf8ea902257b983fe e658f3dc2c947ee31e0d92d83aa24e915002a0f6 lockeriano <patryk.skrzyniarz19@gmail.com> 1514579396 +0100	commit: Add factory bot to production group
+e658f3dc2c947ee31e0d92d83aa24e915002a0f6 118749245bef1882b31c98e1df02a0cb68140343 lockeriano <patryk.skrzyniarz19@gmail.com> 1514588029 +0100	commit: Fixed typo in gemfile

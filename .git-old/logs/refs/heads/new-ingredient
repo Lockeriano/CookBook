@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 b9445a4f0bd17b155444410af51a40a9e3d87d89 lockeriano <patryk.skrzyniarz19@gmail.com> 1517648019 +0100	branch: Created from HEAD
+b9445a4f0bd17b155444410af51a40a9e3d87d89 e6157eb494f19622ede1b8bf01fb4693fe74ba59 lockeriano <patryk.skrzyniarz19@gmail.com> 1517759039 +0100	commit: Made new ingredient view, added more validations to ingredient model, rebuild ingredient controller
+e6157eb494f19622ede1b8bf01fb4693fe74ba59 552248ccf19ac381a8c2e54645d6e0bec9775e41 lockeriano <patryk.skrzyniarz19@gmail.com> 1517764491 +0100	commit: Made code more consistent and created tests for new ingredient page
+552248ccf19ac381a8c2e54645d6e0bec9775e41 ca0ec957e1be92e50ade5db0c7946957226f1376 lockeriano <patryk.skrzyniarz19@gmail.com> 1517774390 +0100	commit: rebuild tests to be more specific

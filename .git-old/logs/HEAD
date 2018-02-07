@@ -1,0 +1,137 @@
+0000000000000000000000000000000000000000 5ad0460efb6898afc0ec070155c02a119fd7c507 lockeriano <patryk.skrzyniarz19@gmail.com> 1513163969 +0100	clone: from https://github.com/Lockeriano/CookBook.git
+5ad0460efb6898afc0ec070155c02a119fd7c507 6034e07d8a6aedc603dc75efcba5e3ebf0bb9a4c lockeriano <patryk.skrzyniarz19@gmail.com> 1513166966 +0100	pull origin show-recipes: Fast-forward
+6034e07d8a6aedc603dc75efcba5e3ebf0bb9a4c 5ad0460efb6898afc0ec070155c02a119fd7c507 lockeriano <patryk.skrzyniarz19@gmail.com> 1513167115 +0100	reset: moving to 5ad0460
+5ad0460efb6898afc0ec070155c02a119fd7c507 6034e07d8a6aedc603dc75efcba5e3ebf0bb9a4c lockeriano <patryk.skrzyniarz19@gmail.com> 1513167132 +0100	checkout: moving from master to show-recipes
+6034e07d8a6aedc603dc75efcba5e3ebf0bb9a4c 5ad0460efb6898afc0ec070155c02a119fd7c507 lockeriano <patryk.skrzyniarz19@gmail.com> 1513167145 +0100	checkout: moving from show-recipes to master
+5ad0460efb6898afc0ec070155c02a119fd7c507 6034e07d8a6aedc603dc75efcba5e3ebf0bb9a4c lockeriano <patryk.skrzyniarz19@gmail.com> 1513167152 +0100	checkout: moving from master to show-recipes
+6034e07d8a6aedc603dc75efcba5e3ebf0bb9a4c 5ad0460efb6898afc0ec070155c02a119fd7c507 lockeriano <patryk.skrzyniarz19@gmail.com> 1513167187 +0100	checkout: moving from show-recipes to master
+5ad0460efb6898afc0ec070155c02a119fd7c507 6034e07d8a6aedc603dc75efcba5e3ebf0bb9a4c lockeriano <patryk.skrzyniarz19@gmail.com> 1513167234 +0100	checkout: moving from master to show-recipes
+6034e07d8a6aedc603dc75efcba5e3ebf0bb9a4c 6034e07d8a6aedc603dc75efcba5e3ebf0bb9a4c lockeriano <patryk.skrzyniarz19@gmail.com> 1513192164 +0100	checkout: moving from show-recipes to show-recipes
+6034e07d8a6aedc603dc75efcba5e3ebf0bb9a4c b810c70c725d588db82a4faf9c25d9ab250a3e14 lockeriano <patryk.skrzyniarz19@gmail.com> 1513192207 +0100	commit: Add database.yml to ignored
+b810c70c725d588db82a4faf9c25d9ab250a3e14 1e417fdab5dd87d776f017f28e37cd6e8e8041f7 lockeriano <patryk.skrzyniarz19@gmail.com> 1513192360 +0100	commit: Add config/database.yml.example
+1e417fdab5dd87d776f017f28e37cd6e8e8041f7 624eca5e94049a7f0ee2ab6f717029fcc66a05aa lockeriano <patryk.skrzyniarz19@gmail.com> 1513192425 +0100	commit: Remove database.yml
+624eca5e94049a7f0ee2ab6f717029fcc66a05aa 2c37adbf340c8b906acc1009147996999f583377 lockeriano <patryk.skrzyniarz19@gmail.com> 1513252107 +0100	commit: Added pry and launchy gem to help us out with testing
+2c37adbf340c8b906acc1009147996999f583377 1dfa08581d613837cadeb3bb3f32255f82117532 lockeriano <patryk.skrzyniarz19@gmail.com> 1513252348 +0100	commit: Trying to fix travis build vol.1
+1dfa08581d613837cadeb3bb3f32255f82117532 1dfa08581d613837cadeb3bb3f32255f82117532 lockeriano <patryk.skrzyniarz19@gmail.com> 1513254283 +0100	checkout: moving from show-recipes to database-migration
+1dfa08581d613837cadeb3bb3f32255f82117532 1dfa08581d613837cadeb3bb3f32255f82117532 lockeriano <patryk.skrzyniarz19@gmail.com> 1513282404 +0100	checkout: moving from recipe-ingredients-migration to show-recipes
+1dfa08581d613837cadeb3bb3f32255f82117532 5ad0460efb6898afc0ec070155c02a119fd7c507 lockeriano <patryk.skrzyniarz19@gmail.com> 1513282586 +0100	rebase -i (start): checkout master
+5ad0460efb6898afc0ec070155c02a119fd7c507 83a2e495c78ab5cf568ab31ae6086b3ddcd1355e lockeriano <patryk.skrzyniarz19@gmail.com> 1513282586 +0100	rebase -i (pick): Changed rubocop version due to security warning
+83a2e495c78ab5cf568ab31ae6086b3ddcd1355e 4843410ede97ff75fd65575a735650f9513e7cfc lockeriano <patryk.skrzyniarz19@gmail.com> 1513282586 +0100	rebase -i (pick): Changed rubocop version due to security warning
+4843410ede97ff75fd65575a735650f9513e7cfc ab0788184fc24f94e4bf28f0d0fb4787b5541ff8 lockeriano <patryk.skrzyniarz19@gmail.com> 1513282586 +0100	rebase -i (pick): Changed version of rubocop
+ab0788184fc24f94e4bf28f0d0fb4787b5541ff8 34c674461f91c81ffb151af1b7c5541499bca479 lockeriano <patryk.skrzyniarz19@gmail.com> 1513282586 +0100	rebase -i (pick): Created show page for each recipe and passed some sample data to DB to show it in show_recipe_path. Made integration tests to check if recipe have picture, ingridients and instructions
+34c674461f91c81ffb151af1b7c5541499bca479 9eeb7cb673e77a2307b933c8f6380c707b0137fa lockeriano <patryk.skrzyniarz19@gmail.com> 1513282586 +0100	rebase -i (pick): Made requested changes from PR and fixed issues pointed by codeclimate
+9eeb7cb673e77a2307b933c8f6380c707b0137fa 885cf8f1c75b080a70af49709f0046b77a916493 lockeriano <patryk.skrzyniarz19@gmail.com> 1513282586 +0100	rebase -i (pick): Fixed CC issues and add regexp to integration test - deployment on heroku with sample data done
+885cf8f1c75b080a70af49709f0046b77a916493 875391711f390ee61f81ed45a58dacbdbb1e6b8e lockeriano <patryk.skrzyniarz19@gmail.com> 1513282586 +0100	rebase -i (pick): Changed rspec to test another recipe and moved page.all to before
+875391711f390ee61f81ed45a58dacbdbb1e6b8e a5adec8a7de4b1ded0f583adafe3b5242cc68d6a lockeriano <patryk.skrzyniarz19@gmail.com> 1513282586 +0100	rebase -i (pick): Add database.yml to ignored
+a5adec8a7de4b1ded0f583adafe3b5242cc68d6a 1b28a1ca9b5d8911c95198e9f79776b3ccecbc41 lockeriano <patryk.skrzyniarz19@gmail.com> 1513282586 +0100	rebase -i (pick): Remove database.yml
+1b28a1ca9b5d8911c95198e9f79776b3ccecbc41 6ac6ea92053259fbb52a19c5a3c7ef8264099306 lockeriano <patryk.skrzyniarz19@gmail.com> 1513282586 +0100	rebase -i (pick): Added pry and launchy gem to help us out with testing
+6ac6ea92053259fbb52a19c5a3c7ef8264099306 1f3c1c384bae394d1bbdea3f9138bc463e8754b4 lockeriano <patryk.skrzyniarz19@gmail.com> 1513282586 +0100	rebase -i (pick): Trying to fix travis build vol.1
+1f3c1c384bae394d1bbdea3f9138bc463e8754b4 1f3c1c384bae394d1bbdea3f9138bc463e8754b4 lockeriano <patryk.skrzyniarz19@gmail.com> 1513282587 +0100	rebase -i (finish): returning to refs/heads/show-recipes
+1f3c1c384bae394d1bbdea3f9138bc463e8754b4 830b6f04e6dd0abe5aaaacf565a33523031592ab lockeriano <patryk.skrzyniarz19@gmail.com> 1513283115 +0100	commit: Add example for db config
+830b6f04e6dd0abe5aaaacf565a33523031592ab 5a7eaa8627458ef7486698bc5739cd1e35616743 lockeriano <patryk.skrzyniarz19@gmail.com> 1513327929 +0100	commit: Fixed regexp validation for image in rspec
+5a7eaa8627458ef7486698bc5739cd1e35616743 1dfa08581d613837cadeb3bb3f32255f82117532 lockeriano <patryk.skrzyniarz19@gmail.com> 1513328038 +0100	checkout: moving from show-recipes to recipe-ingredients-migration
+1dfa08581d613837cadeb3bb3f32255f82117532 5a7eaa8627458ef7486698bc5739cd1e35616743 lockeriano <patryk.skrzyniarz19@gmail.com> 1513329106 +0100	checkout: moving from recipe-ingredients-migration to show-recipes
+5a7eaa8627458ef7486698bc5739cd1e35616743 5ad0460efb6898afc0ec070155c02a119fd7c507 lockeriano <patryk.skrzyniarz19@gmail.com> 1513329206 +0100	checkout: moving from show-recipes to master
+5ad0460efb6898afc0ec070155c02a119fd7c507 5a7eaa8627458ef7486698bc5739cd1e35616743 lockeriano <patryk.skrzyniarz19@gmail.com> 1513329355 +0100	checkout: moving from master to show-recipes
+5a7eaa8627458ef7486698bc5739cd1e35616743 5ad0460efb6898afc0ec070155c02a119fd7c507 lockeriano <patryk.skrzyniarz19@gmail.com> 1513329367 +0100	checkout: moving from show-recipes to master
+5ad0460efb6898afc0ec070155c02a119fd7c507 5a7eaa8627458ef7486698bc5739cd1e35616743 lockeriano <patryk.skrzyniarz19@gmail.com> 1513329371 +0100	checkout: moving from master to show-recipes
+5a7eaa8627458ef7486698bc5739cd1e35616743 5ad0460efb6898afc0ec070155c02a119fd7c507 lockeriano <patryk.skrzyniarz19@gmail.com> 1513329374 +0100	checkout: moving from show-recipes to master
+5ad0460efb6898afc0ec070155c02a119fd7c507 5ad0460efb6898afc0ec070155c02a119fd7c507 lockeriano <patryk.skrzyniarz19@gmail.com> 1513329404 +0100	checkout: moving from master to recipe_ingridients_relation
+5ad0460efb6898afc0ec070155c02a119fd7c507 5a7eaa8627458ef7486698bc5739cd1e35616743 lockeriano <patryk.skrzyniarz19@gmail.com> 1513329414 +0100	checkout: moving from recipe_ingridients_relation to show-recipes
+5a7eaa8627458ef7486698bc5739cd1e35616743 5ad0460efb6898afc0ec070155c02a119fd7c507 lockeriano <patryk.skrzyniarz19@gmail.com> 1513329433 +0100	checkout: moving from show-recipes to master
+5ad0460efb6898afc0ec070155c02a119fd7c507 5a7eaa8627458ef7486698bc5739cd1e35616743 lockeriano <patryk.skrzyniarz19@gmail.com> 1513329451 +0100	checkout: moving from master to show-recipes
+5a7eaa8627458ef7486698bc5739cd1e35616743 5ad0460efb6898afc0ec070155c02a119fd7c507 lockeriano <patryk.skrzyniarz19@gmail.com> 1513329732 +0100	checkout: moving from show-recipes to master
+5ad0460efb6898afc0ec070155c02a119fd7c507 5a7eaa8627458ef7486698bc5739cd1e35616743 lockeriano <patryk.skrzyniarz19@gmail.com> 1513329756 +0100	checkout: moving from master to show-recipes
+5a7eaa8627458ef7486698bc5739cd1e35616743 830b6f04e6dd0abe5aaaacf565a33523031592ab lockeriano <patryk.skrzyniarz19@gmail.com> 1513330414 +0100	reset: moving to 830b6f0
+830b6f04e6dd0abe5aaaacf565a33523031592ab 5a7eaa8627458ef7486698bc5739cd1e35616743 lockeriano <patryk.skrzyniarz19@gmail.com> 1513330445 +0100	reset: moving to 5a7eaa8
+5a7eaa8627458ef7486698bc5739cd1e35616743 5ad0460efb6898afc0ec070155c02a119fd7c507 lockeriano <patryk.skrzyniarz19@gmail.com> 1513331147 +0100	checkout: moving from show-recipes to master
+5ad0460efb6898afc0ec070155c02a119fd7c507 5a7eaa8627458ef7486698bc5739cd1e35616743 lockeriano <patryk.skrzyniarz19@gmail.com> 1513331152 +0100	checkout: moving from master to show-recipes
+5a7eaa8627458ef7486698bc5739cd1e35616743 5ad0460efb6898afc0ec070155c02a119fd7c507 lockeriano <patryk.skrzyniarz19@gmail.com> 1513331291 +0100	checkout: moving from show-recipes to master
+5ad0460efb6898afc0ec070155c02a119fd7c507 5ad0460efb6898afc0ec070155c02a119fd7c507 lockeriano <patryk.skrzyniarz19@gmail.com> 1513331314 +0100	checkout: moving from master to recipes-ingridients-relation
+5ad0460efb6898afc0ec070155c02a119fd7c507 5ad0460efb6898afc0ec070155c02a119fd7c507 lockeriano <patryk.skrzyniarz19@gmail.com> 1513331353 +0100	checkout: moving from recipes-ingridients-relation to master
+5ad0460efb6898afc0ec070155c02a119fd7c507 5a7eaa8627458ef7486698bc5739cd1e35616743 lockeriano <patryk.skrzyniarz19@gmail.com> 1513331378 +0100	checkout: moving from master to show-recipes
+5a7eaa8627458ef7486698bc5739cd1e35616743 5ad0460efb6898afc0ec070155c02a119fd7c507 lockeriano <patryk.skrzyniarz19@gmail.com> 1513331382 +0100	checkout: moving from show-recipes to master
+5ad0460efb6898afc0ec070155c02a119fd7c507 5ad0460efb6898afc0ec070155c02a119fd7c507 lockeriano <patryk.skrzyniarz19@gmail.com> 1513331469 +0100	checkout: moving from master to recipes-ingridients-relation
+5ad0460efb6898afc0ec070155c02a119fd7c507 5a7eaa8627458ef7486698bc5739cd1e35616743 lockeriano <patryk.skrzyniarz19@gmail.com> 1513331477 +0100	checkout: moving from recipes-ingridients-relation to show-recipes
+5a7eaa8627458ef7486698bc5739cd1e35616743 5ad0460efb6898afc0ec070155c02a119fd7c507 lockeriano <patryk.skrzyniarz19@gmail.com> 1513331489 +0100	checkout: moving from show-recipes to recipes-ingridients-relation
+5ad0460efb6898afc0ec070155c02a119fd7c507 5ad0460efb6898afc0ec070155c02a119fd7c507 lockeriano <patryk.skrzyniarz19@gmail.com> 1513333439 +0100	checkout: moving from recipes-ingridients-relation to master
+5ad0460efb6898afc0ec070155c02a119fd7c507 5ad0460efb6898afc0ec070155c02a119fd7c507 lockeriano <patryk.skrzyniarz19@gmail.com> 1513333697 +0100	checkout: moving from master to recipes-ingridients-relation
+5ad0460efb6898afc0ec070155c02a119fd7c507 eebd64a37926e4228b5c22749fa9c50a35b420a6 lockeriano <patryk.skrzyniarz19@gmail.com> 1513333711 +0100	commit: blah blah
+eebd64a37926e4228b5c22749fa9c50a35b420a6 5ad0460efb6898afc0ec070155c02a119fd7c507 lockeriano <patryk.skrzyniarz19@gmail.com> 1513333718 +0100	checkout: moving from recipes-ingridients-relation to master
+5ad0460efb6898afc0ec070155c02a119fd7c507 f2a63fedc72e9218376e0f6b251e195ab962b11e lockeriano <patryk.skrzyniarz19@gmail.com> 1513333753 +0100	pull origin master: Fast-forward
+f2a63fedc72e9218376e0f6b251e195ab962b11e 5a7eaa8627458ef7486698bc5739cd1e35616743 lockeriano <patryk.skrzyniarz19@gmail.com> 1513333796 +0100	checkout: moving from master to show-recipes
+5a7eaa8627458ef7486698bc5739cd1e35616743 6291305bf00c1ae02aa8b630852a416a13382937 lockeriano <patryk.skrzyniarz19@gmail.com> 1513334357 +0100	commit (merge): Merged conflicts
+6291305bf00c1ae02aa8b630852a416a13382937 f2a63fedc72e9218376e0f6b251e195ab962b11e lockeriano <patryk.skrzyniarz19@gmail.com> 1513334389 +0100	checkout: moving from show-recipes to master
+f2a63fedc72e9218376e0f6b251e195ab962b11e 6291305bf00c1ae02aa8b630852a416a13382937 lockeriano <patryk.skrzyniarz19@gmail.com> 1513334438 +0100	checkout: moving from master to show-recipes
+6291305bf00c1ae02aa8b630852a416a13382937 eebd64a37926e4228b5c22749fa9c50a35b420a6 lockeriano <patryk.skrzyniarz19@gmail.com> 1513334521 +0100	checkout: moving from show-recipes to recipes-ingridients-relation
+eebd64a37926e4228b5c22749fa9c50a35b420a6 75b974f5aabc8843bf7d1ca2b38da82fd0cc5a90 lockeriano <patryk.skrzyniarz19@gmail.com> 1513334607 +0100	commit (merge): Merged conflicts
+75b974f5aabc8843bf7d1ca2b38da82fd0cc5a90 f2a63fedc72e9218376e0f6b251e195ab962b11e lockeriano <patryk.skrzyniarz19@gmail.com> 1513334969 +0100	checkout: moving from recipes-ingridients-relation to master
+f2a63fedc72e9218376e0f6b251e195ab962b11e 6291305bf00c1ae02aa8b630852a416a13382937 lockeriano <patryk.skrzyniarz19@gmail.com> 1513334979 +0100	checkout: moving from master to show-recipes
+6291305bf00c1ae02aa8b630852a416a13382937 f2a63fedc72e9218376e0f6b251e195ab962b11e lockeriano <patryk.skrzyniarz19@gmail.com> 1513334982 +0100	checkout: moving from show-recipes to master
+f2a63fedc72e9218376e0f6b251e195ab962b11e 6291305bf00c1ae02aa8b630852a416a13382937 lockeriano <patryk.skrzyniarz19@gmail.com> 1513335040 +0100	checkout: moving from master to show-recipes
+6291305bf00c1ae02aa8b630852a416a13382937 75b974f5aabc8843bf7d1ca2b38da82fd0cc5a90 lockeriano <patryk.skrzyniarz19@gmail.com> 1513335050 +0100	checkout: moving from show-recipes to recipes-ingridients-relation
+75b974f5aabc8843bf7d1ca2b38da82fd0cc5a90 f2a63fedc72e9218376e0f6b251e195ab962b11e lockeriano <patryk.skrzyniarz19@gmail.com> 1513335055 +0100	checkout: moving from recipes-ingridients-relation to master
+f2a63fedc72e9218376e0f6b251e195ab962b11e 75b974f5aabc8843bf7d1ca2b38da82fd0cc5a90 lockeriano <patryk.skrzyniarz19@gmail.com> 1513335061 +0100	checkout: moving from master to recipes-ingridients-relation
+75b974f5aabc8843bf7d1ca2b38da82fd0cc5a90 6291305bf00c1ae02aa8b630852a416a13382937 lockeriano <patryk.skrzyniarz19@gmail.com> 1513335101 +0100	checkout: moving from recipes-ingridients-relation to show-recipes
+6291305bf00c1ae02aa8b630852a416a13382937 75b974f5aabc8843bf7d1ca2b38da82fd0cc5a90 lockeriano <patryk.skrzyniarz19@gmail.com> 1513335491 +0100	checkout: moving from show-recipes to recipes-ingridients-relation
+75b974f5aabc8843bf7d1ca2b38da82fd0cc5a90 2292139bd460ef704525df2683348a4dfb344616 lockeriano <patryk.skrzyniarz19@gmail.com> 1513335732 +0100	commit: Made many-to-many relationship and created new migration
+2292139bd460ef704525df2683348a4dfb344616 1656c5922b34b393318ed4aa35b5c7746743bc05 lockeriano <patryk.skrzyniarz19@gmail.com> 1513338153 +0100	commit: Created recipe_ingridients table, removed collumns from ingridients
+1656c5922b34b393318ed4aa35b5c7746743bc05 f2a63fedc72e9218376e0f6b251e195ab962b11e lockeriano <patryk.skrzyniarz19@gmail.com> 1513338304 +0100	checkout: moving from recipes-ingridients-relation to master
+f2a63fedc72e9218376e0f6b251e195ab962b11e f2a63fedc72e9218376e0f6b251e195ab962b11e lockeriano <patryk.skrzyniarz19@gmail.com> 1513338332 +0100	checkout: moving from master to edit-recipe
+f2a63fedc72e9218376e0f6b251e195ab962b11e f2a63fedc72e9218376e0f6b251e195ab962b11e lockeriano <patryk.skrzyniarz19@gmail.com> 1513338365 +0100	checkout: moving from edit-recipe to master
+f2a63fedc72e9218376e0f6b251e195ab962b11e f2a63fedc72e9218376e0f6b251e195ab962b11e lockeriano <patryk.skrzyniarz19@gmail.com> 1513338423 +0100	checkout: moving from master to edit-recipe
+f2a63fedc72e9218376e0f6b251e195ab962b11e 1656c5922b34b393318ed4aa35b5c7746743bc05 lockeriano <patryk.skrzyniarz19@gmail.com> 1513340101 +0100	checkout: moving from edit-recipe to recipes-ingridients-relation
+1656c5922b34b393318ed4aa35b5c7746743bc05 6291305bf00c1ae02aa8b630852a416a13382937 lockeriano <patryk.skrzyniarz19@gmail.com> 1513348715 +0100	checkout: moving from recipes-ingridients-relation to show-recipes
+6291305bf00c1ae02aa8b630852a416a13382937 7b0eaa7b2cecbc8751869d9e722840c22171f625 lockeriano <patryk.skrzyniarz19@gmail.com> 1513348927 +0100	commit: Removed back button from views and rspec
+7b0eaa7b2cecbc8751869d9e722840c22171f625 1656c5922b34b393318ed4aa35b5c7746743bc05 lockeriano <patryk.skrzyniarz19@gmail.com> 1513349042 +0100	checkout: moving from show-recipes to recipes-ingridients-relation
+1656c5922b34b393318ed4aa35b5c7746743bc05 87d1b79d1f02b25743563ffd6c8a820beb3425f3 lockeriano <patryk.skrzyniarz19@gmail.com> 1513352146 +0100	commit: Fixed syntax in models
+87d1b79d1f02b25743563ffd6c8a820beb3425f3 7b0eaa7b2cecbc8751869d9e722840c22171f625 lockeriano <patryk.skrzyniarz19@gmail.com> 1513352150 +0100	checkout: moving from recipes-ingridients-relation to show-recipes
+7b0eaa7b2cecbc8751869d9e722840c22171f625 44deb63dd6b718566aadc7ac1b29af9b966503b0 lockeriano <patryk.skrzyniarz19@gmail.com> 1513352316 +0100	commit: Fixed CC issues
+44deb63dd6b718566aadc7ac1b29af9b966503b0 87d1b79d1f02b25743563ffd6c8a820beb3425f3 lockeriano <patryk.skrzyniarz19@gmail.com> 1513352485 +0100	checkout: moving from show-recipes to recipes-ingridients-relation
+87d1b79d1f02b25743563ffd6c8a820beb3425f3 f2a63fedc72e9218376e0f6b251e195ab962b11e lockeriano <patryk.skrzyniarz19@gmail.com> 1513352499 +0100	checkout: moving from recipes-ingridients-relation to master
+f2a63fedc72e9218376e0f6b251e195ab962b11e e345a987a6ec3364f52300f4a928ae40179917da lockeriano <patryk.skrzyniarz19@gmail.com> 1513352507 +0100	pull origin master: Fast-forward
+e345a987a6ec3364f52300f4a928ae40179917da 87d1b79d1f02b25743563ffd6c8a820beb3425f3 lockeriano <patryk.skrzyniarz19@gmail.com> 1513352518 +0100	checkout: moving from master to recipes-ingridients-relation
+87d1b79d1f02b25743563ffd6c8a820beb3425f3 7c1e9904c1ca248295cbd0c7473b96ba6f8e7284 lockeriano <patryk.skrzyniarz19@gmail.com> 1513352543 +0100	pull origin master: Merge made by the 'recursive' strategy.
+7c1e9904c1ca248295cbd0c7473b96ba6f8e7284 d55c142f1351d4b90d2265f2040b6fe9823009cc lockeriano <patryk.skrzyniarz19@gmail.com> 1514545517 +0100	commit: Fixed relations between models, added delegate to ingridient model, refactored factories, fixed show loop
+d55c142f1351d4b90d2265f2040b6fe9823009cc 6345022fce5789f811c137f106044148b86eed6a lockeriano <patryk.skrzyniarz19@gmail.com> 1514546460 +0100	commit: Added exclude schema.rb to rubocop config
+6345022fce5789f811c137f106044148b86eed6a 158809b8b6e0012243af7f7bf8ea902257b983fe lockeriano <patryk.skrzyniarz19@gmail.com> 1514578302 +0100	commit: Made requested changes
+158809b8b6e0012243af7f7bf8ea902257b983fe e658f3dc2c947ee31e0d92d83aa24e915002a0f6 lockeriano <patryk.skrzyniarz19@gmail.com> 1514579396 +0100	commit: Add factory bot to production group
+e658f3dc2c947ee31e0d92d83aa24e915002a0f6 118749245bef1882b31c98e1df02a0cb68140343 lockeriano <patryk.skrzyniarz19@gmail.com> 1514588029 +0100	commit: Fixed typo in gemfile
+118749245bef1882b31c98e1df02a0cb68140343 e345a987a6ec3364f52300f4a928ae40179917da lockeriano <patryk.skrzyniarz19@gmail.com> 1515013469 +0100	checkout: moving from recipes-ingridients-relation to master
+e345a987a6ec3364f52300f4a928ae40179917da 0133ed76fbb64733bb09a20d31832f8e45d9a2ae lockeriano <patryk.skrzyniarz19@gmail.com> 1515013477 +0100	pull origin master: Fast-forward
+0133ed76fbb64733bb09a20d31832f8e45d9a2ae 0133ed76fbb64733bb09a20d31832f8e45d9a2ae lockeriano <patryk.skrzyniarz19@gmail.com> 1515013516 +0100	checkout: moving from master to edit_recipe
+0133ed76fbb64733bb09a20d31832f8e45d9a2ae 58b376f849f134d557e8f02f59aa17675f4a0efd lockeriano <patryk.skrzyniarz19@gmail.com> 1516461768 +0100	commit: WIP
+58b376f849f134d557e8f02f59aa17675f4a0efd e4b451a342a98d49b3efbe6c7afbb2f26bbc5eef lockeriano <patryk.skrzyniarz19@gmail.com> 1516771313 +0100	commit: to rebase
+e4b451a342a98d49b3efbe6c7afbb2f26bbc5eef 0133ed76fbb64733bb09a20d31832f8e45d9a2ae lockeriano <patryk.skrzyniarz19@gmail.com> 1516771328 +0100	checkout: moving from edit_recipe to master
+0133ed76fbb64733bb09a20d31832f8e45d9a2ae 0133ed76fbb64733bb09a20d31832f8e45d9a2ae lockeriano <patryk.skrzyniarz19@gmail.com> 1516771356 +0100	checkout: moving from master to list_ingridients
+0133ed76fbb64733bb09a20d31832f8e45d9a2ae 0133ed76fbb64733bb09a20d31832f8e45d9a2ae lockeriano <patryk.skrzyniarz19@gmail.com> 1516772290 +0100	checkout: moving from list_ingridients to fix_ingrIdient_typo
+0133ed76fbb64733bb09a20d31832f8e45d9a2ae 0133ed76fbb64733bb09a20d31832f8e45d9a2ae lockeriano <patryk.skrzyniarz19@gmail.com> 1516772295 +0100	checkout: moving from fix_ingrIdient_typo to fix_ingrIdient_typo
+0133ed76fbb64733bb09a20d31832f8e45d9a2ae 9b8bdd97f95ca4677e07f5e61572d78c2fa3d2ed lockeriano <patryk.skrzyniarz19@gmail.com> 1516772922 +0100	commit: Fixed typo in ingr-I-dients in whole project
+9b8bdd97f95ca4677e07f5e61572d78c2fa3d2ed 0133ed76fbb64733bb09a20d31832f8e45d9a2ae lockeriano <patryk.skrzyniarz19@gmail.com> 1516773092 +0100	checkout: moving from fix_ingrIdient_typo to list_ingridients
+0133ed76fbb64733bb09a20d31832f8e45d9a2ae 1d62ff189aec2b658e6d6ffd86c2dd58967445a4 lockeriano <patryk.skrzyniarz19@gmail.com> 1516774668 +0100	commit: Created new controller ingredients and made views for it. Also added proper route to navigate to ingredients list
+1d62ff189aec2b658e6d6ffd86c2dd58967445a4 9b8bdd97f95ca4677e07f5e61572d78c2fa3d2ed lockeriano <patryk.skrzyniarz19@gmail.com> 1517245404 +0100	checkout: moving from list_ingridients to fix_ingrIdient_typo
+9b8bdd97f95ca4677e07f5e61572d78c2fa3d2ed b85690e7624b6732cf9b9fbae2eca0e4ea918b44 lockeriano <patryk.skrzyniarz19@gmail.com> 1517251783 +0100	commit: Fixed uniqueness error
+b85690e7624b6732cf9b9fbae2eca0e4ea918b44 1d62ff189aec2b658e6d6ffd86c2dd58967445a4 lockeriano <patryk.skrzyniarz19@gmail.com> 1517252021 +0100	checkout: moving from fix_ingrIdient_typo to list_ingridients
+1d62ff189aec2b658e6d6ffd86c2dd58967445a4 2a1ef906bce1f51e7b728c7e08d7db6e54acf9d1 lockeriano <patryk.skrzyniarz19@gmail.com> 1517263811 +0100	commit: blah blah
+2a1ef906bce1f51e7b728c7e08d7db6e54acf9d1 0133ed76fbb64733bb09a20d31832f8e45d9a2ae lockeriano <patryk.skrzyniarz19@gmail.com> 1517263824 +0100	checkout: moving from list_ingridients to master
+0133ed76fbb64733bb09a20d31832f8e45d9a2ae b5b5bfdeec8f2e5ddcb30532f66aceaeeb3974c2 lockeriano <patryk.skrzyniarz19@gmail.com> 1517263830 +0100	pull origin master: Fast-forward
+b5b5bfdeec8f2e5ddcb30532f66aceaeeb3974c2 2a1ef906bce1f51e7b728c7e08d7db6e54acf9d1 lockeriano <patryk.skrzyniarz19@gmail.com> 1517263838 +0100	checkout: moving from master to list_ingridients
+2a1ef906bce1f51e7b728c7e08d7db6e54acf9d1 344478b455c19cca18989b1801ba1460e3eddc05 lockeriano <patryk.skrzyniarz19@gmail.com> 1517263842 +0100	merge master: Merge made by the 'recursive' strategy.
+344478b455c19cca18989b1801ba1460e3eddc05 9e7b8dd6487506c7b367777d685dca69e98e32f8 lockeriano <patryk.skrzyniarz19@gmail.com> 1517348239 +0100	commit: Fixed rendering errors, added ingredients resources in routes and fixed few minor config problems with tools
+9e7b8dd6487506c7b367777d685dca69e98e32f8 85da203e6221554f5ff94a125b40ae951e146134 lockeriano <patryk.skrzyniarz19@gmail.com> 1517510976 +0100	commit: Made simple test for ingredients page
+85da203e6221554f5ff94a125b40ae951e146134 172c53195d0d83b1e7b97831b71bc67ee630004b lockeriano <patryk.skrzyniarz19@gmail.com> 1517647637 +0100	commit: Fixed nesting in ingredients views
+172c53195d0d83b1e7b97831b71bc67ee630004b b5b5bfdeec8f2e5ddcb30532f66aceaeeb3974c2 lockeriano <patryk.skrzyniarz19@gmail.com> 1517647876 +0100	checkout: moving from list_ingridients to master
+b5b5bfdeec8f2e5ddcb30532f66aceaeeb3974c2 b9445a4f0bd17b155444410af51a40a9e3d87d89 lockeriano <patryk.skrzyniarz19@gmail.com> 1517647887 +0100	pull origin master: Fast-forward
+b9445a4f0bd17b155444410af51a40a9e3d87d89 b9445a4f0bd17b155444410af51a40a9e3d87d89 lockeriano <patryk.skrzyniarz19@gmail.com> 1517647899 +0100	checkout: moving from master to show-ingredients
+b9445a4f0bd17b155444410af51a40a9e3d87d89 b9445a4f0bd17b155444410af51a40a9e3d87d89 lockeriano <patryk.skrzyniarz19@gmail.com> 1517647972 +0100	checkout: moving from show-ingredients to master
+b9445a4f0bd17b155444410af51a40a9e3d87d89 b9445a4f0bd17b155444410af51a40a9e3d87d89 lockeriano <patryk.skrzyniarz19@gmail.com> 1517648019 +0100	checkout: moving from master to new-ingredient
+b9445a4f0bd17b155444410af51a40a9e3d87d89 e6157eb494f19622ede1b8bf01fb4693fe74ba59 lockeriano <patryk.skrzyniarz19@gmail.com> 1517759039 +0100	commit: Made new ingredient view, added more validations to ingredient model, rebuild ingredient controller
+e6157eb494f19622ede1b8bf01fb4693fe74ba59 552248ccf19ac381a8c2e54645d6e0bec9775e41 lockeriano <patryk.skrzyniarz19@gmail.com> 1517764491 +0100	commit: Made code more consistent and created tests for new ingredient page
+552248ccf19ac381a8c2e54645d6e0bec9775e41 ca0ec957e1be92e50ade5db0c7946957226f1376 lockeriano <patryk.skrzyniarz19@gmail.com> 1517774390 +0100	commit: rebuild tests to be more specific
+ca0ec957e1be92e50ade5db0c7946957226f1376 ca0ec957e1be92e50ade5db0c7946957226f1376 lockeriano <patryk.skrzyniarz19@gmail.com> 1518018090 +0100	checkout: moving from new-ingredient to edit_recipe_page
+ca0ec957e1be92e50ade5db0c7946957226f1376 b9445a4f0bd17b155444410af51a40a9e3d87d89 lockeriano <patryk.skrzyniarz19@gmail.com> 1518018119 +0100	checkout: moving from edit_recipe_page to master
+b9445a4f0bd17b155444410af51a40a9e3d87d89 2d529521302e471572c5c5cf50b467989b81a8d7 lockeriano <patryk.skrzyniarz19@gmail.com> 1518018128 +0100	pull origin master: Fast-forward
+2d529521302e471572c5c5cf50b467989b81a8d7 2d529521302e471572c5c5cf50b467989b81a8d7 lockeriano <patryk.skrzyniarz19@gmail.com> 1518018158 +0100	checkout: moving from master to edit_recipe_page
+2d529521302e471572c5c5cf50b467989b81a8d7 2d529521302e471572c5c5cf50b467989b81a8d7 lockeriano <patryk.skrzyniarz19@gmail.com> 1518018259 +0100	checkout: moving from edit_recipe_page to master
+2d529521302e471572c5c5cf50b467989b81a8d7 2d529521302e471572c5c5cf50b467989b81a8d7 lockeriano <patryk.skrzyniarz19@gmail.com> 1518018294 +0100	checkout: moving from master to edit_ingredients_page
+                                                                                                                                                                                                 
