@@ -1,0 +1,7 @@
+0000000000000000000000000000000000000000 0133ed76fbb64733bb09a20d31832f8e45d9a2ae lockeriano <patryk.skrzyniarz19@gmail.com> 1516771356 +0100	branch: Created from HEAD
+0133ed76fbb64733bb09a20d31832f8e45d9a2ae 1d62ff189aec2b658e6d6ffd86c2dd58967445a4 lockeriano <patryk.skrzyniarz19@gmail.com> 1516774668 +0100	commit: Created new controller ingredients and made views for it. Also added proper route to navigate to ingredients list
+1d62ff189aec2b658e6d6ffd86c2dd58967445a4 2a1ef906bce1f51e7b728c7e08d7db6e54acf9d1 lockeriano <patryk.skrzyniarz19@gmail.com> 1517263811 +0100	commit: blah blah
+2a1ef906bce1f51e7b728c7e08d7db6e54acf9d1 344478b455c19cca18989b1801ba1460e3eddc05 lockeriano <patryk.skrzyniarz19@gmail.com> 1517263842 +0100	merge master: Merge made by the 'recursive' strategy.
+344478b455c19cca18989b1801ba1460e3eddc05 9e7b8dd6487506c7b367777d685dca69e98e32f8 lockeriano <patryk.skrzyniarz19@gmail.com> 1517348239 +0100	commit: Fixed rendering errors, added ingredients resources in routes and fixed few minor config problems with tools
+9e7b8dd6487506c7b367777d685dca69e98e32f8 85da203e6221554f5ff94a125b40ae951e146134 lockeriano <patryk.skrzyniarz19@gmail.com> 1517510976 +0100	commit: Made simple test for ingredients page
+85da203e6221554f5ff94a125b40ae951e146134 172c53195d0d83b1e7b97831b71bc67ee630004b lockeriano <patryk.skrzyniarz19@gmail.com> 1517647637 +0100	commit: Fixed nesting in ingredients views

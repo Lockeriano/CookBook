@@ -8,7 +8,7 @@ feature 'user creates new ingredient' do
     fill_in('ingredient_unit_type', with: 'Type')
     click_button('Save')
     current_path.match(ingredients_path)
-    expect(page).to have_content("Example Ingredient Type")
+    expect(page).to have_content('Example Ingredient Type')
   end
 
   context 'when empty params are submitted' do

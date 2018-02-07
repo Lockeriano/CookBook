@@ -1,0 +1,17 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = git@github.com:lockeriano/CookBook.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[branch "show-recipes"]
+	remote = origin
+	merge = refs/heads/show-recipes
+[remote "heroku"]
+	url = https://git.heroku.com/frozen-everglades-78827.git
+	fetch = +refs/heads/*:refs/remotes/heroku/*

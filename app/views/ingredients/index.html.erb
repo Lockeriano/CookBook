@@ -16,7 +16,7 @@
             <td><%= ingredient.name %></td>
             <td><%= ingredient.unit_type %></td>
             <td>
-              <%= link_to 'Edit', '#', class: 'btn btn-primary', type: 'edit' %>
+              <%= link_to 'Edit', edit_ingredient_path(ingredient), class: 'btn btn-primary', type: 'edit' %>
               <%= link_to 'Delete', '#', class: 'btn btn-danger', type: 'delete' %>
             </td>
           </tr>
