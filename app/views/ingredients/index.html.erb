@@ -1,13 +1,13 @@
-<div class="container wrapper">
-  <div class="row">
-    <div class="col-md-offset-3 col-md-6 col-md-offset-3">
-      <%= link_to "Add ingredient", "#", class: "btn btn-default mb-5", type: "new" %>
-      <table class="table">
+<div class='container wrapper'>
+  <div class='row'>
+    <div class='col-md-offset-3 col-md-6 col-md-offset-3'>
+      <%= link_to 'Add ingredient', new_ingredient_path, class: 'btn btn-default mb-5', type: 'new' %>
+      <table class='table'>
         <thead>
           <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Unit Type</th>
-            <th scope="col">Action</th>
+            <th scope='col'>Name</th>
+            <th scope='col'>Unit Type</th>
+            <th scope='col'>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -16,8 +16,8 @@
             <td><%= ingredient.name %></td>
             <td><%= ingredient.unit_type %></td>
             <td>
-              <%= link_to "Edit", "#", class: "btn btn-primary", type: "edit" %>
-              <%= link_to "Delete", "#", class: "btn btn-danger", type: "delete" %>
+              <%= link_to 'Edit', edit_ingredient_path(ingredient), class: 'btn btn-primary', type: 'edit' %>
+              <%= link_to 'Delete', '#', class: 'btn btn-danger', type: 'delete' %>
             </td>
           </tr>
         <% end %>
