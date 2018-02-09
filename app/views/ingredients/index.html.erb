@@ -17,7 +17,8 @@
             <td><%= ingredient.unit_type %></td>
             <td>
               <%= link_to 'Edit', '#', class: 'btn btn-primary', type: 'edit' %>
-              <%= link_to 'Delete', '#', class: 'btn btn-danger', type: 'delete' %>
+              <%= link_to 'Delete',
+               ingredient_path(ingredient), class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
             </td>
           </tr>
         <% end %>
