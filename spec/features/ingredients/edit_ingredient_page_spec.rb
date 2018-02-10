@@ -1,9 +1,8 @@
 feature 'user visits edit ingredients page' do
   before do
-    FactoryBot.create(:ingredient, :egg)
+    @ingredient = FactoryBot.create(:ingredient, :egg)
     visit('/ingredients')
     click_link('Edit')
-    current_path.match(%r{/ingredients/\d+/edit})
   end
 
   context 'user provides valid params' do
@@ -28,7 +27,7 @@ feature 'user visits edit ingredients page' do
     end
 
     it 'fails to update ingredient' do
-      current_path.match(%r{/ingredients/\d+/edit})
+      current_path.match(%r{/ingredients/#{@ingredient.id}/edit})
       expect(page).to have_content("can't be blank")
     end
   end
