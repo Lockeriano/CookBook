@@ -10,9 +10,24 @@ class IngredientsController < ApplicationController
   def create
     @ingredient = Ingredient.new(ingredient_params)
     if @ingredient.save
+      flash[:success] = 'Ingredient created successfully'
       redirect_to ingredients_path
     else
-      render action: 'new'
+      render 'new'
+    end
+  end
+
+  def edit
+    @ingredient = Ingredient.find(params[:id])
+  end
+
+  def update
+    @ingredient = Ingredient.find(params[:id])
+    if @ingredient.update(ingredient_params)
+      flash[:success] = 'Ingredient updated successfully'
+      redirect_to ingredients_path
+    else
+      render 'edit'
     end
   end
 
