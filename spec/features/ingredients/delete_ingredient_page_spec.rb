@@ -6,7 +6,11 @@ feature 'user deletes ingredient' do
     page.all(:xpath, '//a[contains(text(), "Delete")]')[1].click
   end
 
+<<<<<<< HEAD
   it 'successfully deletes ingredient' do
+=======
+  it 'successfully delete ingredient' do
+>>>>>>> a7e385fca7a47f4a6865f9000ea5982ac7519f48
     current_path.match(ingredients_path)
     expect(page).to have_content('Ingredient was deleted')
     expect(page).to have_content('egg')
