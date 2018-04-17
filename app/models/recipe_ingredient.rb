@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class RecipeIngredient < ApplicationRecord
   validates :unit_amount, presence: true, numericality: {greater_than: 0}
 

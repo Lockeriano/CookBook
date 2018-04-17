@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class Ingredient < ApplicationRecord
   validates :name, :unit_type, presence: true, length: {minimum: 2}
   validates_uniqueness_of :name

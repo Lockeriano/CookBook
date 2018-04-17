@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class Recipe < ApplicationRecord
   validates :name, :instructions, presence: true
   validates :instructions, length: {minimum: 10}
