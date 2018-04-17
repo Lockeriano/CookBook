@@ -10,21 +10,27 @@
       <div class='form-group'>
         <label for='instructions'>Instructions</label>
         <%= i.text_field :instructions, class: 'form-control' %>
-        <span class='error-span'><%= @recipe.errors[:unit_type].join(', ') %></span>
+        <span class='error-span'><%= @recipe.errors[:instructions].join(', ') %></span>
       </div>
     </div>
   </div>
   <label for='recipe_ingredients'>Ingredients</label>
   <div class="row">
     <div class="col-lg-12">
-      <%= i.fields_for :ingredients, @recipe.ingredients.each do |ing| %>
-        <%= ing.fields_for :recipe_ingredients, @recipe.recipe_ingredients.each do |rec_ing| %>
+      <%= i.fields_for :recipe_ingredients, @recipe.recipe_ingredients.each do |rec_ing| %>
       <li>
-        <%= ing.text_field :name %>
+        <div class="input-group">
+          <label for='ingredient_name'>
+          <%= rec_ing.collection_select(:ingredient_id, Ingredient.all, :id, :name) %>
+        </div>
+        <div class="input-group">
           <%= rec_ing.text_field :unit_amount %>
-        <%= ing.text_field :unit_type, disabled: true %>
+          <p class='error-span'><%= rec_ing.errors_for(:unit_amount) %></p>
+        </div>
+        <div class="input-group">
+          <%= rec_ing.text_field :unit_type, disabled: true %>
+        </div>
       </li>
-        <% end %>
       <% end %>
     </div>
   </div>

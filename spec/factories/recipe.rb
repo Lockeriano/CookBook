@@ -18,7 +18,7 @@ FactoryBot.define do
 
     trait :boiled_eggs do
       name 'boiled eggs'
-      instructions 'boil eggs'
+      instructions 'boil those eggs'
 
       after(:build) do |recipe|
         egg = Ingredient.find_by_name('egg') || FactoryBot.build(:ingredient, :egg)

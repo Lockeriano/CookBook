@@ -17,13 +17,18 @@ class RecipesController < ApplicationController
       flash[:success] = 'Recipe updated successfully'
       redirect_to recipe_path
     else
-      render 'edit'
+      render :edit
     end
+
+  rescue ActiveRecord::RecordNotUnique
+    flash[:danger] = 'Ingredients must be unique'
+    render :edit
   end
 
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name, :instructions, ingredients_attributes: [:id, :name, recipe_ingredients_attributes: [:id, :unit_amount]])
+    params.require(:recipe).permit(:name, :instructions,  ingredients_attributes: [:id, :name, :unit_type],
+                                                          recipe_ingredients_attributes: [:id, :ingredient_id, :unit_amount])
   end
 end
