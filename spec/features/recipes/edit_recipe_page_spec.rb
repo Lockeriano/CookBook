@@ -31,6 +31,7 @@ describe 'user visits edit recipe page' do
       click_link 'Edit'
       fill_in('recipe_name', with: 'a')
       fill_in('recipe_instructions', with: 'abc')
+      page.select('butter', from: 'recipe_recipe_ingredients_attributes_0_ingredient_id')
       fill_in('recipe_recipe_ingredients_attributes_0_unit_amount', with: '')
       click_button 'Save'
     end
@@ -39,6 +40,7 @@ describe 'user visits edit recipe page' do
       expect(page).to have_current_path(%r{recipes/\d+})
       expect(page).to have_content('is too short')
       expect(page).to have_content("can't be blank")
+      expect(page).to have_content('has already been taken')
       expect(page).to have_content('is not a number')
     end
   end

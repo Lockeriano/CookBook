@@ -20,10 +20,6 @@ class RecipesController < ApplicationController
     else
       render :edit
     end
-
-  rescue ActiveRecord::RecordNotUnique
-    flash[:danger] = 'Ingredients must be unique'
-    render :edit
   end
 
   private

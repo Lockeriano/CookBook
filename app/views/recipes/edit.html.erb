@@ -21,6 +21,7 @@
                   <div class="input-group">
                     <label for='ingredient_name'>
                     <%= rec_ing.collection_select(:ingredient_id, Ingredient.all, :id, :name) %>
+                    <p class='error-span'><%= rec_ing.errors_for(:recipe_id) %></p>
                   </div>
                   <div class="input-group">
                     <%= rec_ing.text_field :unit_amount %>
