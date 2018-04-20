@@ -24,10 +24,12 @@
                     <p class='error-span'><%= rec_ing.errors_for(:recipe_id) %></p>
                   </div>
                   <div class="input-group">
+                    <label for='unit_amount'>
                     <%= rec_ing.text_field :unit_amount %>
                     <p class='error-span'><%= rec_ing.errors_for(:unit_amount) %></p>
                   </div>
                   <div class="input-group">
+                    <label for='unit_type'>
                     <%= rec_ing.text_field :unit_type, disabled: true %>
                   </div>
                 </li>
