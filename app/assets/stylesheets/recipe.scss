@@ -19,6 +19,7 @@
 li {
   list-style-type: none;
   font-size: 1.4rem;
+  height: 100px;
 }
 
 .recipe-header {
@@ -34,4 +35,18 @@ li {
   th {
     text-align: inherit;
   }
+}
+
+.field_with_errors {
+  display: inline;
+}
+
+.input-group {
+  display: inline-block;
+  height: 8rem;
+}
+
+.error-span {
+  position: absolute;
+  font-weight: 400;
 }

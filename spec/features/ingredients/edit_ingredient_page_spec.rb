@@ -28,7 +28,7 @@ feature 'user visits edit ingredients page' do
     end
 
     it 'fails to update ingredient' do
-      current_path.match(%r{/ingredients/#{ingredient.id}/edit})
+      expect(page).to have_current_path(%r{ingredients/#{ingredient.id}})
       expect(page).to have_content("can't be blank")
     end
   end
