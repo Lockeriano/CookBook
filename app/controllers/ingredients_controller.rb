@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class IngredientsController < ApplicationController
   def index
     @ingredients = Ingredient.all
@@ -13,7 +14,7 @@ class IngredientsController < ApplicationController
       flash[:success] = 'Ingredient created successfully'
       redirect_to ingredients_path
     else
-      render 'new'
+      render :new
     end
   end
 
@@ -27,7 +28,7 @@ class IngredientsController < ApplicationController
       flash[:success] = 'Ingredient updated successfully'
       redirect_to ingredients_path
     else
-      render 'edit'
+      render :edit
     end
   end
 
@@ -42,6 +43,6 @@ class IngredientsController < ApplicationController
   private
 
   def ingredient_params
-    params.require(:ingredient).permit(:name, :unit_type)
+    params.require(:ingredient).permit(:id, :name, :unit_type)
   end
 end
