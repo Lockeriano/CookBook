@@ -9,10 +9,11 @@
 
   <body>
     <div class="container">
-      <nav class='navbar'>
-        <%= link_to 'Recipes', recipes_path, class: 'btn btn-link nav-btn' %>
-        <%= link_to 'Ingredients', ingredients_path, class: 'btn btn-link nav-btn' %>
-      </nav>
+      <ul role="navigation" class="nav nav-tabs nav-justified">
+        <li role="presentation"><%= link_to "Recipes", recipes_path %></li>
+        <li role="presentation"><%= link_to "Ingredients", ingredients_path %></li>
+      </ul>
+    </div>
       <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
       <% end %>
