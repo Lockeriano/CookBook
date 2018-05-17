@@ -8,7 +8,7 @@ feature 'user deletes recipe ingredient' do
   end
 
   it 'successfully deletes recipe ingredient' do
-    current_path.match(%r{recipes/\d+})
+    current_path =~ %r{recipes/\d+}
     expect(page).to have_content('butter')
     expect(page).to have_content('chicken')
     expect(page).to have_no_content('salt')

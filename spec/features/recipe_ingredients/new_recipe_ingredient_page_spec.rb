@@ -24,7 +24,7 @@ feature 'user creates new recipe ingredient' do
     end
 
     it 'displays presence errors' do
-      current_path.match(%r{recipes/\d+/recipe_ingredients/new})
+      current_path =~ %r{recipes/\d+/recipe_ingredients/new}
       expect(page).to have_content("can't be blank")
       expect(page).to have_content('is not a number')
     end
@@ -38,7 +38,7 @@ feature 'user creates new recipe ingredient' do
     end
 
     it 'displays uniqueness error' do
-      current_path.match(%r{recipes/\d+/recipe_ingredients/new})
+      current_path =~ %r{recipes/\d+/recipe_ingredients/new}
       expect(page).to have_content('has already been taken')
     end
   end

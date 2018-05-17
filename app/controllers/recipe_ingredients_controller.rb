@@ -1,5 +1,5 @@
+# frozen_string_literal: true
 class RecipeIngredientsController < ApplicationController
-
   def new
     @recipe = Recipe.find(params[:recipe_id])
     @recipe_ingredient = @recipe.recipe_ingredients.new
@@ -33,7 +33,7 @@ class RecipeIngredientsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to @recipe }
       format.json { head :no_content }
-      format.js   { render :layout => false }
+      format.js   { render layout: false }
     end
   end
 
