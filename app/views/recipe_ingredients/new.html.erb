@@ -1,0 +1,26 @@
+<div class='container wrapper'>
+  <div class='row'>
+    <div class='col-md-offset-3 col-md-6 col-md-offset-3'>
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Amount</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <%= form_for :recipe_ingredients, url: {action: 'create'} do |rec_ing| %>
+          <tbody>
+            <tr>
+              <td><%= rec_ing.collection_select(:ingredient_id, Ingredient.all, :id, :name) %></br>
+                <%= @recipe_ingredient.errors[:recipe_id] if @recipe_ingredient.errors[:recipe_id].present? %></td>
+              <td><%= rec_ing.text_field :unit_amount %></br>
+                <%= @recipe_ingredient.errors[:unit_amount] if @recipe_ingredient.errors[:unit_amount].present? %></td>
+              <td><%= rec_ing.submit 'Save' %></td>
+            </tr>
+          </tbody>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>

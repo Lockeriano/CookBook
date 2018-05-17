@@ -6,6 +6,6 @@ class Recipe < ApplicationRecord
   has_many :recipe_ingredients
   has_many :ingredients, through: :recipe_ingredients
 
-  accepts_nested_attributes_for :ingredients, :recipe_ingredients, :allow_destroy 
-  validates_associated :ingredients, :recipe_ingredients
+  accepts_nested_attributes_for :recipe_ingredients, allow_destroy: true
+  validates_associated :recipe_ingredients
 end
