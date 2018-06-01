@@ -43,6 +43,7 @@ group :test do
   gem 'capybara', '~> 2.16'
   gem 'database_cleaner', '~> 1.6.2'
   gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
 end
 
 gem 'tzinfo-data', platforms: %i(mingw mswin x64_mingw jruby)

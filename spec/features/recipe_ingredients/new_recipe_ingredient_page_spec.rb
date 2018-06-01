@@ -8,8 +8,8 @@ feature 'user creates new recipe ingredient' do
   end
 
   it 'creates new recipe ingredient' do
-    page.select('egg', from: 'recipe_ingredients[ingredient_id]')
-    fill_in('recipe_ingredients[unit_amount]', with: '10')
+    page.select('egg', from: 'recipe_ingredient_ingredient_id')
+    fill_in('recipe_ingredient_unit_amount', with: '10')
     click_button('Save')
     expect(page).to have_current_path(%r{recipes/\d+})
     expect(page).to have_content('egg')
@@ -19,12 +19,12 @@ feature 'user creates new recipe ingredient' do
 
   context 'when incorrect unit amount is submitted' do
     before do
-      fill_in('recipe_ingredients[unit_amount]', with: '')
+      fill_in('recipe_ingredient_unit_amount', with: '')
       click_button('Save')
     end
 
     it 'displays presence errors' do
-      current_path =~ %r{recipes/\d+/recipe_ingredients/new}
+      expect(page).to have_current_path(%r{recipes/\d+/recipe_ingredients})
       expect(page).to have_content("can't be blank")
       expect(page).to have_content('is not a number')
     end
@@ -32,13 +32,13 @@ feature 'user creates new recipe ingredient' do
 
   context 'when existing recipe ingredient is submitted' do
     before do
-      page.select('tikka', from: 'recipe_ingredients[ingredient_id]')
-      fill_in('recipe_ingredients[unit_amount]', with: '10')
+      page.select('tikka', from: 'recipe_ingredient_ingredient_id')
+      fill_in('recipe_ingredient_unit_amount', with: '10')
       click_button('Save')
     end
 
     it 'displays uniqueness error' do
-      current_path =~ %r{recipes/\d+/recipe_ingredients/new}
+      expect(page).to have_current_path(%r{recipes/\d+/recipe_ingredients})
       expect(page).to have_content('has already been taken')
     end
   end

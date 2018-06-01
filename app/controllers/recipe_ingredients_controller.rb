@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 class RecipeIngredientsController < ApplicationController
+  before_action :find_recipe
+
   def new
-    @recipe = Recipe.find(params[:recipe_id])
     @recipe_ingredient = @recipe.recipe_ingredients.new
   end
 
   def create
-    @recipe = Recipe.find(params[:recipe_id])
     @recipe_ingredient = @recipe.recipe_ingredients.build(recipe_ingredient_params)
     if @recipe_ingredient.save
       flash[:success] = 'Successfully added new ingredient'
@@ -17,8 +17,8 @@ class RecipeIngredientsController < ApplicationController
   end
 
   def update
-    @recipe_ingredient = RecipeIngredient.find(params[:id])
-    if @recipe_ingredient.update
+    @recipe_ingredient = @recipe.recipe_ingredients.find(params[:id])
+    if @recipe_ingredient.update(recipe_ingredient_params)
       redirect_to recipe_path(@recipe)
     else
       render :edit
@@ -26,20 +26,21 @@ class RecipeIngredientsController < ApplicationController
   end
 
   def destroy
-    @recipe = Recipe.find(params[:recipe_id])
-    @recipe_ingredient = RecipeIngredient.find(params[:id])
+    @recipe_ingredient = @recipe.recipe_ingredients.find(params[:id])
     @recipe_ingredient.destroy
-
     respond_to do |format|
       format.html { redirect_to @recipe }
-      format.json { head :no_content }
-      format.js   { render layout: false }
+      format.js
     end
   end
 
   private
 
+  def find_recipe
+    @recipe = Recipe.find(params[:recipe_id])
+  end
+
   def recipe_ingredient_params
-    params.require(:recipe_ingredients).permit(:id, :ingredient_id, :recipe_id, :unit_amount)
+    params.require(:recipe_ingredient).permit(:id, :ingredient_id, :recipe_id, :unit_amount)
   end
 end
