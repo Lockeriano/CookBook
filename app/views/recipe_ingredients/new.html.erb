@@ -4,21 +4,21 @@
       <div class='row'>
         <div class='col-lg-12'>
           <%= form_for @recipe_ingredient, url: {action: 'create'} do |rec_ing| %>
-          <li>
-            <div class='input-group'>
-              <label for="ingredient_name">Ingredient</label></br>
-              <%= rec_ing.collection_select(:ingredient_id, Ingredient.all, :id, :name) %>
-              <div class='error-span'><%= @recipe_ingredient.errors[:recipe_id].join(', ') %></div>
-            </div>
-            <div class='input-group'>
-              <label for="unit_amount">Unit Amount</label></br>
-              <%= rec_ing.text_field :unit_amount %>
-              <div class='error-span'><%= @recipe_ingredient.errors[:unit_amount].join(', ') %></div>
-            </div>
-            <div class="input-group">
-              <%= rec_ing.submit 'Save' %>
-            </div>
-          </li>
+            <li>
+              <div class='input-group'>
+                <label for="ingredient_name">Ingredient</label></br>
+                <%= rec_ing.collection_select(:ingredient_id, Ingredient.all, :id, :name) %>
+                <div class='error-span'><%= @recipe_ingredient.errors[:recipe_id].join(', ') %></div>
+              </div>
+              <div class='input-group'>
+                <label for="unit_amount">Unit Amount</label></br>
+                <%= rec_ing.text_field :unit_amount %>
+                <div class='error-span'><%= @recipe_ingredient.errors[:unit_amount].join(', ') %></div>
+              </div>
+              <div class="input-group">
+                <%= rec_ing.submit 'Save' %>
+              </div>
+            </li>
           <% end %>
         </div>
       </div>

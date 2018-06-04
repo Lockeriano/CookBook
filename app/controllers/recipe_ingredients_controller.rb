@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 class RecipeIngredientsController < ApplicationController
-  before_action :find_recipe
+  before_action :find_recipe, except: [:new]
 
   def new
-    @recipe_ingredient = @recipe.recipe_ingredients.new
+    @recipe_ingredient = RecipeIngredient.new
   end
 
   def create
