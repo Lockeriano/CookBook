@@ -8,6 +8,7 @@ feature 'user deletes recipe' do
 
   it 'successfully deletes recipe' do
     expect(page).to have_current_path('/recipes')
+    expect(page).to have_content('Recipe deleted successfully')
     expect(page).to have_no_content('butter chicken')
   end
 end
