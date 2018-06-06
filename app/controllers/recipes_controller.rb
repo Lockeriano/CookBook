@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class RecipesController < ApplicationController
   def index
     @recipes = Recipe.all
@@ -40,6 +41,7 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:recipe).permit(:id, :name, :instructions, recipe_ingredients_attributes: [:id, :ingredient_id, :recipe_id, :unit_amount, :_destroy])
+    params.require(:recipe).permit(:id, :name, :instructions, recipe_ingredients_attributes:
+                                                              %i(id ingredient_id recipe_id unit_amount))
   end
 end
