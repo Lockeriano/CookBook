@@ -9,6 +9,21 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
   end
 
+  def new
+    @recipe = Recipe.new
+    3.times { @recipe.recipe_ingredients.build }
+  end
+
+  def create
+    @recipe = Recipe.new(recipe_params)
+    if @recipe.save
+      redirect_to @recipe
+      flash[:success] = 'Successfully created a recipe'
+    else
+      render :new
+    end
+  end
+
   def edit
     @recipe = Recipe.find(params[:id])
   end
