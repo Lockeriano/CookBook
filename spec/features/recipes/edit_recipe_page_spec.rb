@@ -10,8 +10,8 @@ describe 'user visits edit recipe page' do
   context 'when user provides valid params' do
     before do
       click_link 'Edit'
-      fill_in('recipe_name', with: 'test recipe name')
-      fill_in('recipe_instructions', with: 'test instructions')
+      fill_in('recipe[name]', with: 'test recipe name')
+      fill_in('recipe[instructions]', with: 'test instructions')
       page.select('tikka', from: 'recipe_recipe_ingredients_attributes_0_ingredient_id')
       fill_in('recipe_recipe_ingredients_attributes_0_unit_amount', with: '50')
       click_button 'Save'
@@ -29,8 +29,8 @@ describe 'user visits edit recipe page' do
   context 'when user provides invalid params' do
     before do
       click_link 'Edit'
-      fill_in('recipe_name', with: 'a')
-      fill_in('recipe_instructions', with: 'abc')
+      fill_in('recipe[name]', with: 'a')
+      fill_in('recipe[instructions]', with: 'abc')
       page.select('butter', from: 'recipe_recipe_ingredients_attributes_0_ingredient_id')
       fill_in('recipe_recipe_ingredients_attributes_0_unit_amount', with: '')
       click_button 'Save'

@@ -10,6 +10,7 @@
           <tr>
             <th scope="col">Name</th>
             <th scope="col">Amount</th>
+            <th scope='col'></th>
           </tr>
         </thead>
         <% @recipe.recipe_ingredients.each do |recipe_ingredient| %>
@@ -17,10 +18,12 @@
           <tr>
             <td><%= recipe_ingredient.name %></td>
             <td><%= recipe_ingredient.unit_amount %> <%= recipe_ingredient.unit_type %></td>
+            <td><%= link_to 'Delete Ingredient', recipe_recipe_ingredient_path(@recipe, recipe_ingredient), remote: true, method: :delete, class: 'delete_rec_ing' %></td>
           </tr>
         </tbody>
         <% end %>
       </table>
+      <%= link_to 'Add Ingredient', new_recipe_recipe_ingredient_path(@recipe, @recipe_ingredient), type: 'button', class: 'btn btn-primary' %>
     </div>
     <div class="col-md-6">
       <div class="desc-box">
