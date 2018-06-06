@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class RecipeIngredientsController < ApplicationController
   before_action :find_recipe, except: [:new]
 
