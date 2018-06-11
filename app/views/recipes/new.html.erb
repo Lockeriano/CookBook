@@ -12,6 +12,11 @@
           <%= form.text_field :instructions, class: 'form-control' %>
           <span class='error-span'><%= @recipe.errors[:instructions].join(', ') %></span>
         </div>
+        <div class='form-group field-height'>
+          <label for='image'>Recipe Image</label>
+          <%= form.file_field :image %></br>
+          <span class="error-span"><%= @recipe.errors[:image].join(', ') %></span>
+        </div>
         <%= form.fields_for :recipe_ingredients do |rec_ing| %>
           <%= render "recipe_ingredient_fields", f: rec_ing %>
         <% end %>
