@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class RecipesController < ApplicationController
   before_action :find_recipe, except: [:index, :new, :create]
 
@@ -12,7 +13,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new
     3.times { @recipe.recipe_ingredients.build }
   end
-
+  
   def create
     @recipe = Recipe.new(recipe_params)
     if @recipe.save
