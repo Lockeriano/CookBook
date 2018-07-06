@@ -63,6 +63,7 @@ GEM
     chromedriver-helper (1.2.0)
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
+    cocoon (1.2.11)
     codeclimate-engine-rb (0.4.1)
       virtus (~> 1.0)
     coderay (1.1.2)
@@ -270,6 +271,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.16)
   chromedriver-helper
+  cocoon (~> 1.2, >= 1.2.11)
   coffee-rails (~> 4.2)
   database_cleaner (~> 1.6.2)
   factory_bot

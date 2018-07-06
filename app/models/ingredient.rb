@@ -7,4 +7,8 @@ class Ingredient < ApplicationRecord
   has_many :recipes, through: :recipe_ingredients
 
   accepts_nested_attributes_for :recipe_ingredients
+
+  def name_with_unit_type
+    "#{name} (#{unit_type})"
+  end
 end

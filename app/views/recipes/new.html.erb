@@ -1,0 +1,23 @@
+<div class='container wrapper'>
+  <div class='row'>
+    <div class='col-md-offset-3 col-md-6 col-md-offset-3'>
+      <%= form_for @recipe do |form| %>
+        <div class='form-group field-height'>
+          <label for='name'>Recipe name</label>
+          <%= form.text_field :name, class: 'form-control' %>
+          <span class='error-span'><%= @recipe.errors[:name].join(', ') %></span>
+        </div>
+        <div class='form-group field-height'>
+          <label for='unit type'>Instructions</label>
+          <%= form.text_field :instructions, class: 'form-control' %>
+          <span class='error-span'><%= @recipe.errors[:instructions].join(', ') %></span>
+        </div>
+        <%= form.fields_for :recipe_ingredients do |rec_ing| %>
+          <%= render 'recipe_ingredient_fields', recipe_ingredient_fields: rec_ing %>
+        <% end %>
+        <div><%= link_to_add_association '+', form, :recipe_ingredients, form_name: 'recipe_ingredient_fields', class: 'btn btn-primary' %></div></br>
+        <%= form.submit 'Create Recipe' %>
+      <% end %>
+    </div>
+  </div>
+</div>
