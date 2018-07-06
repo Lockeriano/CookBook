@@ -13,9 +13,9 @@
           <span class='error-span'><%= @recipe.errors[:instructions].join(', ') %></span>
         </div>
         <%= form.fields_for :recipe_ingredients do |rec_ing| %>
-          <%= render "recipe_ingredient_fields", f: rec_ing %>
+          <%= render 'recipe_ingredient_fields', recipe_ingredient_fields: rec_ing %>
         <% end %>
-        <div><%= link_to_add_association '+', form, :recipe_ingredients, class: 'btn btn-primary' %></div></br>
+        <div><%= link_to_add_association '+', form, :recipe_ingredients, form_name: 'recipe_ingredient_fields', class: 'btn btn-primary' %></div></br>
         <%= form.submit 'Create Recipe' %>
       <% end %>
     </div>
