@@ -39,6 +39,8 @@ class RecipesController < ApplicationController
     if @recipe.destroy
       flash[:success] = 'Recipe deleted successfully'
       redirect_to recipes_path
+    else
+      flash[:alert] = 'Recipe cannot be delated'
     end
   end
 
