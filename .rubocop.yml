@@ -4,6 +4,7 @@ AllCops:
   TargetRubyVersion: ~
   Exclude:
     - 'db/**/*.rb'
+    - 'spec/**/*.rb'
 
 Metrics/BlockLength:
   Exclude:
