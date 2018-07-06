@@ -5,6 +5,7 @@ AllCops:
   Exclude:
     - 'db/**/*.rb'
     - 'spec/**/*.rb'
+    - 'spec/**/**/*.rb'
 
 Metrics/BlockLength:
   Exclude:
