@@ -13,7 +13,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new
     3.times { @recipe.recipe_ingredients.build }
   end
-  
+
   def create
     @recipe = Recipe.new(recipe_params)
     if @recipe.save
