@@ -9,9 +9,5 @@ class Recipe < ApplicationRecord
 
   accepts_nested_attributes_for :recipe_ingredients,
     reject_if: proc { |attribute| attribute['unit_amount'].blank? }, allow_destroy: true
-<<<<<<< HEAD
-
-=======
->>>>>>> 3493392e9c57e5ea23e6d0d00276cf7a21ac4c9d
   validates_associated :recipe_ingredients
 end

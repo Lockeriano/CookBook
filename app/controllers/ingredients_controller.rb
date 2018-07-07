@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class IngredientsController < ApplicationController
   def index
     @ingredients = Ingredient.all
@@ -37,6 +38,8 @@ class IngredientsController < ApplicationController
     if @ingredient.destroy
       flash[:notice] = 'Ingredient was deleted'
       redirect_to ingredients_path
+    else
+      flash[:alert] = 'Ingredient cannot be deleted'
     end
   end
 

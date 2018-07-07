@@ -14,14 +14,6 @@ class RecipesController < ApplicationController
     3.times { @recipe.recipe_ingredients.build }
   end
 
-<<<<<<< HEAD
-  def new
-    @recipe = Recipe.new
-    3.times { @recipe.recipe_ingredients.build }
-  end
-
-=======
->>>>>>> 3493392e9c57e5ea23e6d0d00276cf7a21ac4c9d
   def create
     @recipe = Recipe.new(recipe_params)
     if @recipe.save
@@ -30,13 +22,6 @@ class RecipesController < ApplicationController
     else
       render :new
     end
-<<<<<<< HEAD
-  end
-
-  def edit
-    @recipe = Recipe.find(params[:id])
-=======
->>>>>>> 3493392e9c57e5ea23e6d0d00276cf7a21ac4c9d
   end
 
   def edit; end
@@ -55,23 +40,18 @@ class RecipesController < ApplicationController
       flash[:success] = 'Recipe deleted successfully'
       redirect_to recipes_path
     else
-      flash[:alert] = 'Recipe cannot be delated'
+      flash[:alert] = 'Recipe cannot be deleted'
     end
   end
 
   private
 
   def recipe_params
-<<<<<<< HEAD
-    params.require(:recipe).permit(:id, :name, :instructions, recipe_ingredients_attributes:
-                                                              %i(id ingredient_id recipe_id unit_amount _destroy))
-=======
     params.require(:recipe).permit(:id, :name, :instructions,
       recipe_ingredients_attributes: %i(id ingredient_id recipe_id unit_amount _destroy))
   end
 
   def find_recipe
     @recipe = Recipe.find(params[:id])
->>>>>>> 3493392e9c57e5ea23e6d0d00276cf7a21ac4c9d
   end
 end

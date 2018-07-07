@@ -1,17 +1,6 @@
 <div class="nested-fields">
   <div class='input-group'>
     <label for='ingredient_name'>
-<<<<<<< HEAD
-    <%= f.collection_select(:ingredient_id, Ingredient.all, :id, :name_with_unit_type) %>
-    <p class='error-span'><%= f.errors_for(:recipe_id) %></p>
-  </div>
-  <div class='input-group'>
-    <label for='unit_amount'>
-    <%= f.text_field :unit_amount %>
-    <p class='error-span'><%= f.errors_for(:unit_amount) %></p>
-  </div>
-  <%= link_to_remove_association "-", f, class: 'btn btn-danger' %>
-=======
     <%= recipe_ingredient_fields.collection_select(:ingredient_id, Ingredient.all, :id, :name_with_unit_type) %>
     <p class='error-span'><%= recipe_ingredient_fields.errors_for(:recipe_id) %></p>
   </div>
@@ -21,5 +10,4 @@
     <p class='error-span'><%= recipe_ingredient_fields.errors_for(:unit_amount) %></p>
   </div>
   <%= link_to_remove_association "-", recipe_ingredient_fields, class: 'btn btn-danger' %>
->>>>>>> 3493392e9c57e5ea23e6d0d00276cf7a21ac4c9d
 </div>
