@@ -21,7 +21,7 @@ class Recipe < ApplicationRecord
 
   def check_dimensions
     temp_file = image.queued_for_write[:original]
-    unless temp_file.nil?
+    if temp_file
       dimensions = Paperclip::Geometry.from_file(temp_file)
       width = dimensions.width
       height = dimensions.height
