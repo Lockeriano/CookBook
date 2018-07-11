@@ -26,7 +26,7 @@ class Recipe < ApplicationRecord
       height = dimensions.height
 
       if width < 250 && height < 250
-        errors[:image] << ' minimum width: 250px, minimum height: 250px'
+        errors[:image] << 'minimum width: 250px, minimum height: 250px'
       end
     end
   end
