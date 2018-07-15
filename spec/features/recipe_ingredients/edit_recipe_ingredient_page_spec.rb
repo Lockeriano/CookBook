@@ -35,7 +35,7 @@ feature 'user edits recipe ingredients' do
     before do
       click_link '+'
       all('select').last.select('tikka')
-      page.all(:xpath, '//input[@type="text"]').last.set('20')
+      all(:css, 'label[for=unit_amount] input').last.set '20'
       click_button 'Save'
     end
 
@@ -50,7 +50,7 @@ feature 'user edits recipe ingredients' do
     before do
       click_link '+'
       all('select').last.select('egg')
-      page.all(:xpath, '//input[@type="text"]').last.set('0')
+      all(:css, 'label[for=unit_amount] input').last.set '0'
       click_button 'Save'
     end
 
