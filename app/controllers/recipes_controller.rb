@@ -40,7 +40,7 @@ class RecipesController < ApplicationController
       flash[:success] = 'Recipe deleted successfully'
       redirect_to recipes_path
     else
-      flash[:alert] = 'Recipe cannot be delated'
+      flash[:alert] = 'Recipe cannot be deleted'
     end
   end
 

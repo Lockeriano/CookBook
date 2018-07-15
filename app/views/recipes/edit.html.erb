@@ -2,40 +2,20 @@
   <div class='row'>
     <div class='col-md-offset-3 col-md-6 col-md-offset-3'>
       <%= form_for @recipe do |form| %>
-        <div class='form-group'>
-          <label for='name'>Name</label>
+        <div class='form-group field-height'>
+          <label for='name'>Recipe name</label>
           <%= form.text_field :name, class: 'form-control' %>
           <span class='error-span'><%= @recipe.errors[:name].join(', ') %></span>
         </div>
-        <div class='form-group'>
-          <label for='instructions'>Instructions</label>
+        <div class='form-group field-height'>
+          <label for='unit type'>Instructions</label>
           <%= form.text_field :instructions, class: 'form-control' %>
           <span class='error-span'><%= @recipe.errors[:instructions].join(', ') %></span>
         </div>
-
-        <label for='recipe_ingredients'>Ingredients</label>
-          <div class='row'>
-            <div class='col-lg-12'>
-              <%= form.fields_for :recipe_ingredients, @recipe.recipe_ingredients do |rec_ing| %>
-                <li>
-                  <div class='input-group'>
-                    <label for='ingredient_name'>
-                    <%= rec_ing.collection_select(:ingredient_id, Ingredient.all, :id, :name) %>
-                    <p class='error-span'><%= rec_ing.errors_for(:recipe_id) %></p>
-                  </div>
-                  <div class='input-group'>
-                    <label for='unit_amount'>
-                    <%= rec_ing.text_field :unit_amount %>
-                    <p class='error-span'><%= rec_ing.errors_for(:unit_amount) %></p>
-                  </div>
-                  <div class='input-group'>
-                    <label for='unit_type'>
-                    <%= rec_ing.text_field :unit_type, disabled: true %>
-                  </div>
-                </li>
-              <% end %>
-            </div>
-          </div>
+        <%= form.fields_for :recipe_ingredients do |rec_ing| %>
+          <%= render 'recipe_ingredient_fields', recipe_ingredient_fields: rec_ing %>
+        <% end %>
+        <div><%= link_to_add_association '+', form, :recipe_ingredients, form_name: 'recipe_ingredient_fields', class: 'btn btn-primary' %></div></br>
         <%= form.submit 'Save' %>
       <% end %>
     </div>
