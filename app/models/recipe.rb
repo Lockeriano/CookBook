@@ -3,7 +3,7 @@
 class Recipe < ApplicationRecord
   validates :name, :instructions, presence: true
   validates :instructions, length: {minimum: 10}
-  has_attached_file :image, styles: {thumbnail: '250x250#'}, default_url: '/assets/:style/missing.jpg'
+  has_attached_file :image, styles: {thumbnail: '250x250#'}, default_url: 'https://s3.eu-central-1.amazonaws.com/cotton-cookbook/missing.jpg'
 
   validates_attachment_content_type :image, content_type: %r{\Aimage\/.*\z}
   validates_attachment_size :image, less_than: 5.megabytes

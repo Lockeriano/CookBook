@@ -25,6 +25,7 @@ gem 'twitter-bootstrap-rails', '~> 4.0'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test, :production do
+  gem 'aws-sdk'
   gem 'factory_bot_rails'
 end
 
