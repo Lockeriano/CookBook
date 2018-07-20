@@ -9,6 +9,7 @@
               <div class="card-body">
                 <h4 class="card-title"><%= recipe.name %></h4>
                 <%= link_to "Show", recipe_path(recipe), class: "btn btn-primary", type: "show" %>
+                <%= link_to "Delete", recipe_path(recipe), class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
               </div>
             </div>
           </div>
