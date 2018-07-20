@@ -9,6 +9,12 @@ Rails.application.configure do
       s3_region: ENV.fetch('AWS_REGION')
     }
   }
+
+  Capybara::Webkit.configure do |config|
+    config.allow_url('https://s3.eu-central-1.amazonaws.com/cotton-cookbook/missing.jpg')
+    config.allow_url('s3.eu-central-1.amazonaws.com')
+  end
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # The test environment is used exclusively to run your application's
