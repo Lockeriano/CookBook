@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'users/new'
+
   resources :recipes do
     resources :recipe_ingredients
   end

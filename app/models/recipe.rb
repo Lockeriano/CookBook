@@ -9,6 +9,7 @@ class Recipe < ApplicationRecord
   validates_attachment_size :image, less_than: 5.megabytes
   validate :check_dimensions
 
+  belongs_to :user
   has_many :recipe_ingredients
   has_many :ingredients, through: :recipe_ingredients
 
