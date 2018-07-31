@@ -1,20 +1,28 @@
 require 'rails_helper'
 
 RSpec.describe Recipe, type: :model do
-  context 'validation tests' do
+  let(:recipe) do
+    Recipe.new(
+      name: 'example name',
+      instructions: 'example instructions',
+      image: File.new("#{Rails.root}/spec/support/fixtures/correct-image.jpeg")
+    )
+  end
+
+  context 'validation' do
     it 'ensures recipe\'s name presence' do
-      recipe = Recipe.new(instructions: 'example instructions').save
-      expect(recipe).to eq(false)
+      recipe = Recipe.new(instructions: 'example instructions')
+      expect(recipe).to be_invalid
     end
 
     it 'ensures recipe\'s instructions presence' do
-      recipe = Recipe.new(name: 'example name').save
-      expect(recipe).to eq(false)
+      recipe = Recipe.new(name: 'example name')
+      expect(recipe).to be_invalid
     end
 
     it 'ensures recipe\'s instructions length' do
-      recipe = Recipe.new(name: 'example name', instructions: 'ex').save
-      expect(recipe).to eq(false)
+      recipe = Recipe.new(name: 'example name', instructions: 'ex')
+      expect(recipe).to be_invalid
     end
 
     it 'ensures recipe\'s image dimensions' do
@@ -22,17 +30,10 @@ RSpec.describe Recipe, type: :model do
         name: 'example name',
         instructions: 'example instructions',
         image: File.new("#{Rails.root}/spec/support/fixtures/incorrect-image.jpg")
-      ).save
-      expect(recipe).to eq(false)
+      )
+      expect(recipe).to be_invalid
     end
 
-    it 'saves sucessfully' do
-      recipe = Recipe.new(
-        name: 'example name',
-        instructions: 'example instructions',
-        image: File.new("#{Rails.root}/spec/support/fixtures/correct-image.jpeg")
-      ).save
-      expect(recipe).to eq(true)
-    end
+    it { expect(recipe).to be_valid }
   end
 end
