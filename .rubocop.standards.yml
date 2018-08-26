@@ -1,13 +1,13 @@
 require: rubocop-rspec
 
-Naming/AccessorMethodName:
+Style/AccessorMethodName:
   Description: Check the naming of accessor methods for get_/set_.
   StyleGuide: '#accessor_mutator_method_names'
 
 Style/Alias:
   EnforcedStyle: prefer_alias_method
 
-Layout/AlignParameters:
+Style/AlignParameters:
   # Alignment of parameters in multi-line method calls.
   #
   # The `with_first_parameter` style aligns the following lines along the same
@@ -69,7 +69,7 @@ Style/FrozenStringLiteralComment:
     - "**/*.rake"
 
 # Checks the indentation of the first element in an array literal.
-Layout/IndentArray:
+Style/IndentArray:
   # The value `special_inside_parentheses` means that array literals with
   # brackets that have their opening bracket on the same line as a surrounding
   # opening round parenthesis, shall have their first element indented relative
@@ -91,7 +91,7 @@ Layout/IndentArray:
   IndentationWidth: ~
 
 # Checks the indentation of the first key in a hash literal.
-Layout/IndentHash:
+Style/IndentHash:
   # The value `special_inside_parentheses` means that hash literals with braces
   # that have their opening brace on the same line as a surrounding opening
   # round parenthesis, shall have their first key indented relative to the
@@ -155,7 +155,7 @@ Style/MethodCalledOnDoEndBlock:
   StyleGuide: '#single-line-blocks'
   Enabled: true
 
-Layout/MultilineOperationIndentation:
+Style/MultilineOperationIndentation:
   EnforcedStyle: indented
   SupportedStyles:
     - aligned
@@ -177,7 +177,7 @@ Style/PercentLiteralDelimiters:
     '%W': ()
     '%x': '{}'
 
-Layout/SpaceBeforeFirstArg:
+Style/SpaceBeforeFirstArg:
   # When true, allows most uses of extra spacing if the intent is to align
   # things with the previous or next line, not counting empty lines or comment
   # lines.
@@ -220,10 +220,13 @@ Style/StringMethods:
   PreferredMethods:
     intern: to_sym
 
-Layout/SpaceAroundBlockParameters:
+Style/SpaceAroundBlockParameters:
   EnforcedStyleInsidePipes: no_space
+  SupportedStyles:
+    - space
+    - no_space
 
-Layout/SpaceInsideHashLiteralBraces:
+Style/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
   EnforcedStyleForEmptyBraces: no_space
   SupportedStyles:
@@ -263,12 +266,15 @@ Metrics/BlockLength:
 
 ##################### Lint ##################################
 
-Layout/DefEndAlignment:
+Lint/DefEndAlignment:
   # The value `def` means that `end` should be aligned with the def keyword.
   # The value `start_of_line` means that `end` should be aligned with method
   # calls like `private`, `public`, etc, if present in front of the `def`
   # keyword on the same line.
-  EnforcedStyleAlignWith: start_of_line
+  AlignWith: start_of_line
+  SupportedStyles:
+    - start_of_line
+    - def
   AutoCorrect: false
 
 Lint/InheritException:
@@ -342,7 +348,7 @@ RSpec/NestedGroups:
   Description: Checks for nested example groups.
   Enabled: true
   # Default: 3
-  Max: 4
+  MaxNesting: 4
 
 # TODO: Uncomment after CodeClimate will upgrade rubocop-rspec version to 1.10.0.
 # # Disabled because we want to adjust it and allow to use it with the

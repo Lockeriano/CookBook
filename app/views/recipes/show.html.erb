@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-6">
       <div class="recipe-img-box">
-        <%= image_tag @recipe.image.url(:thumbnail) %>
+        <%= image_tag "recipes.png", class: "img-fluid img-thumbnail"%>
         <h1 class="recipe-name"><%= @recipe.name %></h1>
       </div>
       <table class="table table-sm">
@@ -18,10 +18,12 @@
           <tr>
             <td><%= recipe_ingredient.name %></td>
             <td><%= recipe_ingredient.unit_amount %> <%= recipe_ingredient.unit_type %></td>
+            <td><%= link_to 'Delete Ingredient', recipe_recipe_ingredient_path(@recipe, recipe_ingredient), remote: true, method: :delete, class: 'delete_rec_ing' %></td>
           </tr>
         </tbody>
         <% end %>
       </table>
+      <%= link_to 'Add Ingredient', new_recipe_recipe_ingredient_path(@recipe, @recipe_ingredient), type: 'button', class: 'btn btn-primary' %>
     </div>
     <div class="col-md-6">
       <div class="desc-box">

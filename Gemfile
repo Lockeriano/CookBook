@@ -11,13 +11,11 @@ gem 'coffee-rails', '~> 4.2'
 gem 'factory_bot'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
-gem 'paperclip', '~> 6.0.0'
-gem 'paperclip-dimension-validator'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.1.4'
 gem 'reek'
-gem 'rubocop', require: false
+gem 'rubocop', '0.46.0'
 gem 'rubocop-rspec', '1.8.0'
 gem 'sass-rails', '~> 5.0'
 gem 'turbolinks', '~> 5'
@@ -25,7 +23,6 @@ gem 'twitter-bootstrap-rails', '~> 4.0'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test, :production do
-  gem 'aws-sdk'
   gem 'factory_bot_rails'
 end
 

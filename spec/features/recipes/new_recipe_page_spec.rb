@@ -8,7 +8,6 @@ feature 'user creates new recipe' do
     before do
       fill_in('recipe_name', with: 'Example name')
       fill_in('recipe_instructions', with: 'Example instructions')
-      page.attach_file('recipe_image', "#{Rails.root}/spec/support/fixtures/correct-image.jpeg")
       page.select 'egg', from: 'recipe_recipe_ingredients_attributes_0_ingredient_id'
       fill_in('recipe_recipe_ingredients_attributes_0_unit_amount', with: '120')
       page.select 'butter', from: 'recipe_recipe_ingredients_attributes_1_ingredient_id'
@@ -18,7 +17,6 @@ feature 'user creates new recipe' do
 
     it 'creates new recipe' do
       expect(page).to have_content('Successfully created a recipe')
-      expect(page).to have_xpath("//img[contains(@src,'correct-image.jpeg')]")
       expect(page).to have_content('egg')
       expect(page).to have_content('butter')
     end
@@ -47,17 +45,6 @@ feature 'user creates new recipe' do
     it 'displays length error' do
       current_path.match(new_recipe_path)
       expect(page).to have_content('is too short')
-    end
-  end
-
-  context 'when incorrect image is submitted' do
-    before do
-      page.attach_file('recipe_image', "#{Rails.root}/spec/support/fixtures/incorrect-image.jpg")
-      click_button('Create Recipe')
-    end
-
-    it 'displays dimensions error' do
-      expect(page).to have_content('minimum width: 250px, minimum height: 250px')
     end
   end
 

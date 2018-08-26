@@ -1,4 +1,5 @@
 .card {
+  width: 30rem;
   padding: 2rem;
 }
 
@@ -46,18 +47,6 @@ li {
 }
 
 .error-span {
+  position: absolute;
   font-weight: 400;
-}
-
-.col-centered {
-  float: none;
-  margin: 0 auto;
-}
-
-.field-height {
-  height: 100px;
-}
-
-.table-sm {
-  margin-bottom: 100px;
 }

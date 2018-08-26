@@ -1,11 +1,5 @@
 {
   "name": "CookBook",
   "private": true,
-  "scripts": {
-    "start": "rails s"
-  },
-  "dependencies": {
-    "heroku": "^7.7.3",
-    "local": "^0.3.3"
-  }
+  "dependencies": {}
 }
