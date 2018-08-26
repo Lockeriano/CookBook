@@ -5,7 +5,7 @@
         <% recipes_batch.each do |recipe| %>
           <div class="col-md-4">
             <div class="card">
-              <%= image_tag "recipes.png", class: "card-img-top" %>
+              <%= image_tag recipe.image.url(:thumbnail) %></br>
               <div class="card-body">
                 <h4 class="card-title"><%= recipe.name %></h4>
                 <%= link_to "Show", recipe_path(recipe), class: "btn btn-primary", type: "show" %>
