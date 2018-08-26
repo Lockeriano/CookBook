@@ -8,8 +8,7 @@ feature 'user visits show recipe page' do
 
   it 'shows user recipe description' do
     expect(page).to have_current_path(%r{recipes/\d+})
-
-    expect(page.body).to match(%r{img.*src="\/assets\/recipes-.+\.png"})
+    expect(page).to have_xpath("//img[contains(@src,'missing.jpg')]")
     expect(page).to have_content 'tikka masala'
     expect(page).to have_content 'tikka a masal'
     expect(page).to have_content 'tikka 100 mililiter'
