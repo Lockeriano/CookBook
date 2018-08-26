@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 Rails.application.configure do
   Capybara::Webkit.configure do |config|
     config.allow_url('https://s3.eu-central-1.amazonaws.com/cotton-cookbook/missing.jpg')
