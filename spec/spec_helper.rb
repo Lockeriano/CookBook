@@ -29,7 +29,7 @@ RSpec.configure do |config|
   end
 
   config.after(:suite) do
-    FileUtils.rm_rf(Dir["#{Rails.root}/public/system/*"])
+    FileUtils.rm_rf(Dir["#{Rails.root}/spec/support/test_assets"])
   end
 
   # rspec-mocks config goes here. You can use an alternate test double

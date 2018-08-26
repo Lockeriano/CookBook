@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Recipe < ApplicationRecord
-  validates :name, :instructions, presence: true
+  validates :name, presence: true
   validates :instructions, length: {minimum: 10}
   has_attached_file :image, styles: {thumbnail: '250x250#'}, default_url: 'https://s3.eu-central-1.amazonaws.com/cotton-cookbook/missing.jpg'
 
@@ -26,9 +26,7 @@ class Recipe < ApplicationRecord
       width = dimensions.width
       height = dimensions.height
 
-      if width < 250 || height < 250
-        errors.add(:image, message: 'minimum width: 250px, minimum height: 250px')
-      end
+      errors.add(:image, 'minimum width: 250px, minimum height: 250px') if width < 250 || height < 250
     end
   end
 end

@@ -1,38 +1,39 @@
 require 'rails_helper'
 
 RSpec.describe Recipe, type: :model do
-  context 'validation tests' do
-    it 'ensures recipe\'s name presence' do
-      recipe = Recipe.new(instructions: 'example instructions').save
-      expect(recipe).to eq(false)
-    end
+  let(:recipe_attributes) do
+    { name: 'example name', instructions: 'example instructions', image: File.new("#{Rails.root}/spec/support/fixtures/correct-image.jpeg") }
+  end
+  let(:recipe) { Recipe.new(recipe_attributes) }
 
-    it 'ensures recipe\'s instructions presence' do
-      recipe = Recipe.new(name: 'example name').save
-      expect(recipe).to eq(false)
-    end
+  context 'when recipe does not have name' do
+    before { recipe_attributes.delete(:name) }
 
-    it 'ensures recipe\'s instructions length' do
-      recipe = Recipe.new(name: 'example name', instructions: 'ex').save
-      expect(recipe).to eq(false)
+    it 'does not allow to save recipe without name' do
+      expect(recipe).to be_invalid
+      expect(recipe.errors[:name]).to eq ['can\'t be blank']
     end
+  end
 
-    it 'ensures recipe\'s image dimensions' do
-      recipe = Recipe.new(
-        name: 'example name',
-        instructions: 'example instructions',
-        image: File.new("#{Rails.root}/spec/support/fixtures/incorrect-image.jpg")
-      ).save
-      expect(recipe).to eq(false)
-    end
+  context 'when recipe does not have instructions' do
+    before { recipe_attributes.delete(:instructions) }
 
-    it 'saves sucessfully' do
-      recipe = Recipe.new(
-        name: 'example name',
-        instructions: 'example instructions',
-        image: File.new("#{Rails.root}/spec/support/fixtures/correct-image.jpeg")
-      ).save
-      expect(recipe).to eq(true)
+    it 'does not allow to save recipe without instructions' do
+      expect(recipe).to be_invalid
+      expect(recipe.errors[:instructions]).to eq ['is too short (minimum is 10 characters)']
     end
+  end
+
+  context 'when recipe have incorrect image' do
+    before { recipe_attributes[:image] = File.new("#{Rails.root}/spec/support/fixtures/incorrect-image.jpg") }
+    it 'does not allow to save recipe with incorrect image' do
+
+      expect(recipe).to be_invalid
+      expect(recipe.errors[:image]).to eq ['minimum width: 250px, minimum height: 250px']
+    end
+  end
+
+  context 'when recipe attributes are valid' do
+    it { expect(recipe).to be_valid }
   end
 end
