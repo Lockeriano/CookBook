@@ -1,8 +1,9 @@
 describe 'user visits edit recipe page' do
-  let!(:recipe) { FactoryBot.create(:recipe, :scrambled_eggs) }
+  let(:user) { FactoryBot.create(:user) }
+  let!(:recipe) { FactoryBot.create(:recipe, :scrambled_eggs, user: user) }
 
   before do
-    FactoryBot.create(:recipe, :tikka_masala)
+    FactoryBot.create(:recipe, :tikka_masala, user: user)
     visit('/recipes')
     page.all(:xpath, '//a[contains(text(), "Show")]')[0].click
   end

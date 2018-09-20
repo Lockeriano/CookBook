@@ -1,7 +1,9 @@
 feature 'user visits show recipe page' do
+  let(:user) { FactoryBot.create(:user) }
+
   before do
-    FactoryBot.create(:recipe, :scrambled_eggs)
-    FactoryBot.create(:recipe, :tikka_masala)
+    FactoryBot.create(:recipe, :scrambled_eggs, user: user)
+    FactoryBot.create(:recipe, :tikka_masala, user: user)
     visit('/')
     page.all(:xpath, '//a[contains(text(), "Show")]')[1].click
   end

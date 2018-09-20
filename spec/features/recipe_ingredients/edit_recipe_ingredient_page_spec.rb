@@ -1,8 +1,9 @@
 feature 'user edits recipe ingredients' do
-  let!(:first_recipe) { FactoryBot.create(:recipe, :scrambled_eggs) }
+  let(:user) { FactoryBot.create(:user) }
+  let!(:first_recipe) { FactoryBot.create(:recipe, :scrambled_eggs, user: user) }
 
   before do
-    FactoryBot.create(:recipe, :tikka_masala)
+    FactoryBot.create(:recipe, :tikka_masala, user: user)
     visit(edit_recipe_path(first_recipe))
   end
 

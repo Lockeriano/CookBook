@@ -2,6 +2,7 @@
   <div class='row'>
     <div class='col-md-offset-3 col-md-6 col-md-offset-3'>
       <%= form_for @recipe do |form| %>
+        <span class='error-span'><%= @recipe.errors[:user_id].join(', ') %></span></br>
         <div class='form-group field-height'>
           <label for='name'>Recipe name</label>
           <%= form.text_field :name, class: 'form-control' %>

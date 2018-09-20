@@ -1,11 +1,11 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   before_action :find_users, except: %i(index new create)
 
   def index; end
 
-  def show
-    @user = User.find(params[:id])
-  end
+  def show; end
 
   def new
     @user = User.new
@@ -14,8 +14,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      log_in @user
       redirect_to @user
-      flash[:success] = 'User sucessfully created'
+      flash[:success] = 'User successfully created'
     else
       render :new
     end
@@ -25,8 +26,8 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to user_path
-      flash[:success] = "User successfully updated"
+      redirect_to @user
+      flash[:success] = 'User successfully updated'
     end
   end
 

@@ -4,7 +4,12 @@ Rails.application.configure do
   Capybara::Webkit.configure do |config|
     config.allow_url('https://s3.eu-central-1.amazonaws.com/cotton-cookbook/missing.jpg')
     config.allow_url('s3.eu-central-1.amazonaws.com')
+    config.allow_url('code.jquery.com')
+    config.allow_url('cdnjs.cloudflare.com')
+    config.allow_url('maxcdn.bootstrapcdn.com')
   end
+
+  config.middleware.use RackSessionAccess::Middleware
 
   # Settings specified here will take precedence over those in config/application.rb.
 

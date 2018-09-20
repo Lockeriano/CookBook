@@ -49,6 +49,7 @@ group :test do
   gem 'capybara-webkit'
   gem 'chromedriver-helper'
   gem 'database_cleaner', '~> 1.6.2'
+  gem 'rack_session_access'
   gem 'selenium-webdriver'
 end
 

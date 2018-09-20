@@ -3,13 +3,14 @@
 class Recipe < ApplicationRecord
   validates :name, presence: true
   validates :instructions, length: {minimum: 10}
+  validates :user_id, presence: {message: 'You must be logged in'}
   has_attached_file :image, styles: {thumbnail: '250x250#'}, default_url: 'https://s3.eu-central-1.amazonaws.com/cotton-cookbook/missing.jpg'
 
   validates_attachment_content_type :image, content_type: %r{\Aimage\/.*\z}
   validates_attachment_size :image, less_than: 5.megabytes
   validate :check_dimensions
 
-  belongs_to :user
+  belongs_to :user, inverse_of: :recipes
   has_many :recipe_ingredients
   has_many :ingredients, through: :recipe_ingredients
 

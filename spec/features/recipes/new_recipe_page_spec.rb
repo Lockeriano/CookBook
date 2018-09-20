@@ -1,6 +1,9 @@
 feature 'user creates new recipe' do
+  let(:user) { FactoryBot.create(:user) }
+
   before do
-    FactoryBot.create(:recipe, :scrambled_eggs)
+    page.set_rack_session(user_id: user.id)
+    FactoryBot.create(:recipe, :scrambled_eggs, user: user)
     visit('/recipes/new')
   end
 
