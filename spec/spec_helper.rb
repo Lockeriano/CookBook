@@ -97,7 +97,4 @@ RSpec.configure do |config|
   #   # test failures related to randomization by passing the same `--seed` value
   #   # as the one that triggered the failure.
   #   Kernel.srand config.seed
-  def log_in_as(user, password: 'password')
-    post login_path, params: { session: { email: user.email, password: password} }
-  end
 end
