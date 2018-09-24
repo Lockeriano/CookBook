@@ -33,6 +33,10 @@ RSpec.describe User, type: :model do
     end
   end
 
+  context 'authenticated? returns false for a user with nil digest' do
+    it { expect(user.authenticated?('')).to eq false }
+  end
+
   context 'when user attributes are valid' do
     it { expect(user).to be_valid }
   end
