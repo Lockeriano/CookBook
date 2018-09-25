@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 # This file is copied to spec/ when you run 'rails generate rspec:install'
-require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 # Prevent database truncation if the environment is production
@@ -10,6 +9,7 @@ require 'rspec/rails'
 require 'support/factory_bot'
 require 'support/wait_for_ajax'
 require 'capybara/rails'
+require 'spec_helper'
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -35,6 +35,7 @@ Paperclip::Attachment.default_options[:path] = "#{Rails.root}/spec/support/test_
 Capybara.javascript_driver = :webkit
 
 RSpec.configure do |config|
+  config.include WaitForAjax
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 

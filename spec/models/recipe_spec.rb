@@ -1,10 +1,20 @@
 require 'rails_helper'
 
 RSpec.describe Recipe, type: :model do
+  let(:user) { FactoryBot.create(:user) }
   let(:recipe_attributes) do
-    { name: 'example name', instructions: 'example instructions', image: File.new("#{Rails.root}/spec/support/fixtures/correct-image.jpeg") }
+    { name: 'example name', instructions: 'example instructions', image: File.new("#{Rails.root}/spec/support/fixtures/correct-image.jpeg"), user: user }
   end
   let(:recipe) { Recipe.new(recipe_attributes) }
+
+  context 'when user isn\'t logged in' do
+    before { recipe_attributes.delete(:user) }
+
+    it "does not allow to save recipe without user" do
+      expect(recipe).to be_invalid
+      expect(recipe.errors[:user_id]).to eq ['You must be logged in']
+    end
+  end
 
   context 'when recipe does not have name' do
     before { recipe_attributes.delete(:name) }
@@ -27,7 +37,6 @@ RSpec.describe Recipe, type: :model do
   context 'when recipe have incorrect image' do
     before { recipe_attributes[:image] = File.new("#{Rails.root}/spec/support/fixtures/incorrect-image.jpg") }
     it 'does not allow to save recipe with incorrect image' do
-
       expect(recipe).to be_invalid
       expect(recipe.errors[:image]).to eq ['minimum width: 250px, minimum height: 250px']
     end

@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'bcrypt', '3.1.12'
 gem 'cocoon', '~> 1.2', '>= 1.2.11'
 gem 'coffee-rails', '~> 4.2'
 gem 'factory_bot'
@@ -48,6 +49,7 @@ group :test do
   gem 'capybara-webkit'
   gem 'chromedriver-helper'
   gem 'database_cleaner', '~> 1.6.2'
+  gem 'rack_session_access'
   gem 'selenium-webdriver'
 end
 

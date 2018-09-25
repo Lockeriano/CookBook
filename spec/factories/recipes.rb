@@ -2,6 +2,7 @@
 
 FactoryBot.define do
   factory :recipe do
+    user
     trait :scrambled_eggs do
       name 'scrambled eggs'
       instructions 'scramble eggs'
