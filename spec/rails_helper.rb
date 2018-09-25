@@ -30,7 +30,6 @@ require 'capybara/rails'
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
 
-Paperclip::Attachment.default_options[:path] = "#{Rails.root}/spec/support/test_assets/:id_partition/:style.:extension"
 Capybara.javascript_driver = :webkit
 
 RSpec.configure do |config|
