@@ -2,6 +2,9 @@
 
 class UsersController < ApplicationController
   before_action :find_users, except: %i(index new create)
+  before_action :logged_in_user, only: %i(edit update destroy)
+  before_action :correct_user, only: %i(edit update)
+  before_action :admin_user, only: :destroy
 
   def index; end
 
@@ -28,14 +31,15 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to @user
       flash[:success] = 'User successfully updated'
+    else
+      render :edit
     end
   end
 
   def destroy
-    if @user.destroy
-      redirect_to recipes_path
-      flash[:success] = 'User successfully deleted'
-    end
+    User.find(params[:id]).destroy
+    flash[:success] = 'User deleted'
+    redirect_to users_url
   end
 
   private
@@ -46,5 +50,22 @@ class UsersController < ApplicationController
 
   def find_users
     @user = User.find(params[:id])
+  end
+
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = 'Please log in.'
+      redirect_to login_url
+    end
+  end
+
+  def correct_user
+    find_users
+    redirect_to(root_url) unless @user == current_user
+  end
+
+  def admin_user
+    redirect_to(root_url) unless current_user.admin?
   end
 end
