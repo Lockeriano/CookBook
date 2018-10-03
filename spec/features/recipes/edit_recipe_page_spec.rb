@@ -3,6 +3,7 @@ describe 'user visits edit recipe page' do
   let!(:recipe) { FactoryBot.create(:recipe, :scrambled_eggs, user: user) }
 
   before do
+    page.set_rack_session(user_id: user.id)
     FactoryBot.create(:recipe, :tikka_masala, user: user)
     visit('/recipes')
     page.all(:xpath, '//a[contains(text(), "Show")]')[0].click

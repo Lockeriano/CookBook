@@ -7,6 +7,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'bcrypt', '3.1.12'
+gem 'cancancan', '~> 2.0'
 gem 'cocoon', '~> 1.2', '>= 1.2.11'
 gem 'coffee-rails', '~> 4.2'
 gem 'factory_bot'

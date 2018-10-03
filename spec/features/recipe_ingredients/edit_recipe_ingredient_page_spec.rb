@@ -3,6 +3,7 @@ feature 'user edits recipe ingredients' do
   let!(:first_recipe) { FactoryBot.create(:recipe, :scrambled_eggs, user: user) }
 
   before do
+    page.set_rack_session(user_id: user.id)
     FactoryBot.create(:recipe, :tikka_masala, user: user)
     visit(edit_recipe_path(first_recipe))
   end

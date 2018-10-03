@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class SessionsController < ApplicationController
+  skip_authorization_check
+  skip_load_and_authorize_resource
+
   def new; end
 
   def create

@@ -1,7 +1,9 @@
 feature 'user visits edit ingredients page' do
+  let(:user) { FactoryBot.create(:user) }
   let!(:ingredient) { FactoryBot.create(:ingredient, :egg) }
 
   before do
+    page.set_rack_session(user_id: user.id)
     visit('/ingredients')
     click_link('Edit')
   end

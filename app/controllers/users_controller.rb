@@ -4,7 +4,9 @@ class UsersController < ApplicationController
   before_action :find_users, except: %i(index new create)
   before_action :logged_in_user, only: %i(edit update destroy)
   before_action :correct_user, only: %i(edit update)
-  before_action :admin_user, only: :destroy
+  skip_authorization_check :only => :new
+  skip_authorize_resource :only => :new
+  skip_load_and_authorize_resource :only => :new
 
   def index; end
 

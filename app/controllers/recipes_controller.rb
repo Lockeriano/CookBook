@@ -2,6 +2,8 @@
 
 class RecipesController < ApplicationController
   before_action :find_recipe, except: %i(index new create)
+  skip_authorization_check :only => :new
+  skip_load_and_authorize_resource :only => :new
 
   def index
     @recipes = Recipe.all
