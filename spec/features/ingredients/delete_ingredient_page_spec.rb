@@ -1,7 +1,10 @@
 feature 'user deletes ingredient' do
+  let(:user) { FactoryBot.create(:user) }
+
   before do
     FactoryBot.create(:ingredient, :egg)
     FactoryBot.create(:ingredient, :salt)
+    page.set_rack_session(user_id: user.id)
     visit('/ingredients')
     page.all(:xpath, '//a[contains(text(), "Delete")]')[1].click
   end

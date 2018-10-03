@@ -1,14 +1,22 @@
-feature 'user creates new ingredient' do
+feature 'user visits new ingredient page' do
+  let(:user) { FactoryBot.create(:user) }
+
   before do
+    page.set_rack_session(user_id: user.id)
     visit('/ingredients/new')
   end
 
-  it 'creates new ingredient' do
-    fill_in('ingredient_name', with: 'Example Ingredient')
-    fill_in('ingredient_unit_type', with: 'Type')
-    click_button('Save')
-    current_path.match(ingredients_path)
-    expect(page).to have_content('Example Ingredient Type')
+  context 'user attempts to create ingredient' do
+    before do
+      fill_in('ingredient_name', with: 'Example Ingredient')
+      fill_in('ingredient_unit_type', with: 'Type')
+      click_button('Save')
+    end
+
+    it 'successfully creates new ingredient' do
+      current_path.match(ingredients_path)
+      expect(page).to have_content('Example Ingredient Type')
+    end
   end
 
   context 'when empty params are submitted' do

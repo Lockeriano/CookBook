@@ -1,7 +1,8 @@
 feature 'user deletes recipe' do
   let(:user) { FactoryBot.create(:user) }
-  
+
   before do
+    page.set_rack_session(user_id: user.id)
     FactoryBot.create(:recipe, :scrambled_eggs, user: user)
     FactoryBot.create(:recipe, :butter_chicken, user: user)
     visit('/')
