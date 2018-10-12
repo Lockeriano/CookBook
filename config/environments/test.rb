@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.configure do
+  Capybara::Webkit.configure do |config|
+    config.allow_url(ENV['S3_MISSING_IMG_URL'])
+  end
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # The test environment is used exclusively to run your application's
