@@ -6,9 +6,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'aws-sdk'
 gem 'cocoon', '~> 1.2', '>= 1.2.11'
 gem 'coffee-rails', '~> 4.2'
 gem 'factory_bot'
+gem 'factory_bot_rails'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'paperclip', '~> 6.0.0'
@@ -24,13 +26,9 @@ gem 'turbolinks', '~> 5'
 gem 'twitter-bootstrap-rails', '~> 4.0'
 gem 'uglifier', '>= 1.3.0'
 
-group :development, :test, :production do
-  gem 'aws-sdk'
-  gem 'factory_bot_rails'
-end
-
 group :development, :test do
   gem 'byebug', platforms: %i(mri mingw x64_mingw)
+  gem 'dotenv-rails'
   gem 'launchy', '~> 2.4', '>= 2.4.3'
   gem 'pry', '~> 0.11.3'
   gem 'rspec-rails', '~> 3.6'

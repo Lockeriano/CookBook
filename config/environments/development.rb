@@ -8,6 +8,8 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   Paperclip.options[:command_path] = '/usr/local/bin/'
 
+  config.serve_static_assets = true
+
   config.cache_classes = false
 
   # Do not eager load code on boot.
